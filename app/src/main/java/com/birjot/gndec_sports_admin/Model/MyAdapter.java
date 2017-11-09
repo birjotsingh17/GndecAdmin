@@ -12,6 +12,7 @@ import com.birjot.gndec_sports_admin.Activities.Upload;
 import com.birjot.gndec_sports_admin.R;
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,9 +25,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
     private Context context;
-    private List<Upload> uploads;
+    private ArrayList<Upload> uploads;
 
-    public MyAdapter(Context context, List<Upload> uploads) {
+    public MyAdapter(Context context, ArrayList<Upload> uploads) {
         this.uploads = uploads;
         this.context = context;
     }

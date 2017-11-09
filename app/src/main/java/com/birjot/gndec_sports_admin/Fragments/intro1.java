@@ -167,6 +167,9 @@ public class intro1 extends Fragment implements View.OnClickListener{
                             //adding an upload to firebase database
                             String uploadId = mDatabase.push().getKey();
                             mDatabase.child(uploadId).setValue(upload);
+
+                            editTextName.setText(null);
+                            imageView.setVisibility(View.INVISIBLE);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.birjot.gndec_sports_admin.Activities.Constants;
 import com.birjot.gndec_sports_admin.Activities.Upload;
 import com.birjot.gndec_sports_admin.Model.MyAdapter;
@@ -21,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
@@ -46,7 +46,7 @@ public class posts extends Fragment {
     private ProgressDialog progressDialog;
 
     //list to hold all the uploaded images
-    private List<Upload> uploads;
+    private ArrayList<Upload> uploads;
 
     public posts() {
         // Required empty public constructor
@@ -81,6 +81,8 @@ public class posts extends Fragment {
         progressDialog.show();
         mDatabase = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
 
+       /* mDatabase.orderByKey();*/
+
         //adding an event listener to fetch values
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
@@ -93,6 +95,7 @@ public class posts extends Fragment {
                     Upload upload = postSnapshot.getValue(Upload.class);
                     uploads.add(upload);
                 }
+                Collections.reverse(uploads);
                 //creating adapter
                 adapter = new MyAdapter(getActivity().getApplicationContext(), uploads);
 
