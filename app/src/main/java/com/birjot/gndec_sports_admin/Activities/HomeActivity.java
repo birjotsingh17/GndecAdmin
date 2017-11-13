@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.posts;
 import com.birjot.gndec_sports_admin.R;
@@ -163,10 +164,7 @@ public class HomeActivity extends Progressdialog
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;
-
-        }
-
-        else {  //calling the method displayselectedscreen and passing the id of selected menu
+        } else {  //calling the method displayselectedscreen and passing the id of selected menu
             displaySelectedScreen(item.getItemId());
             //make this method blank
             return true;}
@@ -174,11 +172,7 @@ public class HomeActivity extends Progressdialog
         /*else if (id == R.id.nav_send) {
 
         }*/
-
-
     }
-
-
 
 
     private void displaySelectedScreen(int itemId) {
@@ -192,10 +186,10 @@ public class HomeActivity extends Progressdialog
             case R.id.intro1:
                 fragment = new posts();
                 break;
-            /*case R.id.nav_menu2:
-                fragment = new Menu2();
+            case R.id.nav_manage:
+                fragment = new Games();
                 break;
-            case R.id.nav_menu3:
+            /*case R.id.nav_menu3:
                 fragment = new Menu3();
                 break;*/
         }
@@ -209,7 +203,6 @@ public class HomeActivity extends Progressdialog
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-
     }
 
 }
