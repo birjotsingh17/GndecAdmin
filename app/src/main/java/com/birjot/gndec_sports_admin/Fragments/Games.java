@@ -27,11 +27,11 @@ public class Games extends Fragment {
     RecyclerView recyclerView;
 
 
-    void initview(){
+   /* void initview(){
 
 
 
-    }
+    }*/
 
     public Games() {
         // Required empty public constructor
@@ -46,12 +46,19 @@ public class Games extends Fragment {
         GamesModel u1 = new GamesModel(R.drawable.basket,"BASKETBALL");
         GamesModel u2 = new GamesModel(R.drawable.cricket,"CRICKET");
         GamesModel u3 = new GamesModel(R.drawable.football,"FOOTBALL");
+        GamesModel u4 = new GamesModel(R.drawable.basket,"HANDBALL");
+        GamesModel u5 = new GamesModel(R.drawable.cricket,"BADMINTON");
+        GamesModel u6 = new GamesModel(R.drawable.football,"ATHLETICS");
+
 
 
         userlist = new ArrayList<GamesModel>();
         userlist.add(u1);
         userlist.add(u2);
         userlist.add(u3);
+        userlist.add(u4);
+        userlist.add(u5);
+        userlist.add(u6);
 
 
         adapter1= new GamesAdapter(getActivity(),R.layout.gamedesign,userlist);

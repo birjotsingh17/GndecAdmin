@@ -13,10 +13,11 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+import android.os.Handler;
 
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
@@ -28,6 +29,12 @@ import java.io.File;
 
 public class HomeActivity extends Progressdialog
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+
+    boolean doubleBackToExitPressedOnce = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +64,36 @@ public class HomeActivity extends Progressdialog
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        /*DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }*/
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
         }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        finish();
+        System.exit(0);
+        super.onDestroy();
+
     }
 
     @Override
@@ -189,9 +220,11 @@ public class HomeActivity extends Progressdialog
             case R.id.nav_manage:
                 fragment = new Games();
                 break;
-            /*case R.id.nav_menu3:
-                fragment = new Menu3();
-                break;*/
+            case R.id.nav_graph:
+                Intent intent = new Intent(HomeActivity.this,Graphs.class);
+                startActivity(intent);
+                break;
+
         }
 
         //replacing the fragment
