@@ -112,5 +112,7 @@ public class User {
                 ", reg_token='" + reg_token + '\'' +
                 '}';
     }
+
+
 }
 

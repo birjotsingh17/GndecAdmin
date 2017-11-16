@@ -90,6 +90,7 @@ public class SigninActivity extends Progressdialog {
         if(user != null){
             if(user.getEmail().contains("admin@mail.com")){
                 startActivity(new Intent(SigninActivity.this, HomeActivity.class));
+                finish();
             }
           /*  else{
 
