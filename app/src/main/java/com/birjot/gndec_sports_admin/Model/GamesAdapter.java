@@ -68,6 +68,9 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
         holder.txtName.setText(user.getName());
         holder.img.setImageResource(user.getIcon());
 
+
+
+        // onclick recyclerview :: https://www.youtube.com/watch?v=dmIfFIHnKsk
         holder.constraintLayout.setOnClickListener(new View.OnClickListener(){
 
             @Override
