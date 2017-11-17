@@ -1,13 +1,17 @@
 package com.birjot.gndec_sports_admin.Model;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.birjot.gndec_sports_admin.Activities.Graphs;
 import com.birjot.gndec_sports_admin.Activities.Upload;
 import com.birjot.gndec_sports_admin.R;
 import com.bumptech.glide.Glide;
@@ -47,6 +51,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.textViewName.setText(upload.getName());
 
         Glide.with(context).load(upload.getUrl()).into(holder.imageView);
+
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Graphs.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,12 +70,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         public TextView textViewName;
         public ImageView imageView;
+        public LinearLayout linearLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             textViewName = (TextView) itemView.findViewById(R.id.textViewName);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
+
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayout1);
+
         }
     }
 

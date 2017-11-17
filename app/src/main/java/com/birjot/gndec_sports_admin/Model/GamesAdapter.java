@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.birjot.gndec_sports_admin.Activities.Graphs;
+import com.birjot.gndec_sports_admin.Activities.SignUpActivity;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.R;
 
@@ -68,6 +69,9 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
         holder.txtName.setText(user.getName());
         holder.img.setImageResource(user.getIcon());
 
+
+
+        // onclick recyclerview :: https://www.youtube.com/watch?v=dmIfFIHnKsk
         holder.constraintLayout.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -106,7 +110,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
                         break;
 
                     case 5:
-                        Intent intent5 = new Intent(context, Graphs.class);
+                        Intent intent5 = new Intent(context, SignUpActivity.class);
                         context.startActivity(intent5);
 
                         break;
@@ -137,7 +141,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
             txtName=(TextView) itemView.findViewById(R.id.textView5);
 
-            constraintLayout = (ConstraintLayout) itemView.findViewById(R.id.constraint);
+            constraintLayout = (ConstraintLayout) itemView.findViewById(R.id.constr);
         }
     }
 
