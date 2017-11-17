@@ -1,17 +1,22 @@
 package com.birjot.gndec_sports_admin.Model;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.birjot.gndec_sports_admin.Activities.Graphs;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.R;
 
@@ -55,13 +60,64 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
     }*/
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+        Log.d("app", "onBindViewHolder: position "+position);
 
-        GamesModel user = userList.get(position);
+        final GamesModel user = userList.get(position);
 
         holder.txtName.setText(user.getName());
         holder.img.setImageResource(user.getIcon());
 
+
+
+        // onclick recyclerview :: https://www.youtube.com/watch?v=dmIfFIHnKsk
+        holder.constraintLayout.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+               // Toast.makeText(context, "you clicked" +user,Toast.LENGTH_LONG).show();
+
+                switch (position) {
+                    case 0:
+                        Intent intent = new Intent(context, Graphs.class);
+                        context.startActivity(intent);
+
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(context, Graphs.class);
+                        context.startActivity(intent1);
+
+                        break;
+
+                    case 2:
+                        Intent intent2 = new Intent(context, Graphs.class);
+                        context.startActivity(intent2);
+
+                        break;
+
+                    case 3:
+                        Intent intent3 = new Intent(context, Graphs.class);
+                        context.startActivity(intent3);
+
+                        break;
+
+                    case 4:
+                        Intent intent4 = new Intent(context, Graphs.class);
+                        context.startActivity(intent4);
+
+                        break;
+
+                    case 5:
+                        Intent intent5 = new Intent(context, Graphs.class);
+                        context.startActivity(intent5);
+
+                        break;
+
+                }
+
+            }
+        });
 
     }
 
@@ -74,6 +130,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
     {
         TextView txtName;
         ImageView img;
+        public ConstraintLayout constraintLayout;
 
         public ViewHolder(View itemView)
         {
@@ -82,6 +139,8 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
             img=(ImageView) itemView.findViewById(R.id.imageView4);
 
             txtName=(TextView) itemView.findViewById(R.id.textView5);
+
+            constraintLayout = (ConstraintLayout) itemView.findViewById(R.id.constraint);
         }
     }
 
