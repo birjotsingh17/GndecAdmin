@@ -217,7 +217,7 @@ public class HomeActivity extends Progressdialog
 
         //initializing the fragment object which is selected
         switch (itemId) {
-            case R.id.intro1:
+            case R.id.viewposts:
                 fragment = new posts();
                 break;
             case R.id.nav_manage:
