@@ -46,7 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Upload upload = uploads.get(position);
+        final Upload upload = uploads.get(position);
 
         holder.textViewName.setText(upload.getName());
 
@@ -55,7 +55,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, Graphs.class);
+                Toast.makeText(context,"xy"+upload.getName(), Toast.LENGTH_LONG).show();
+
+              Intent intent = new Intent(context, Graphs.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
