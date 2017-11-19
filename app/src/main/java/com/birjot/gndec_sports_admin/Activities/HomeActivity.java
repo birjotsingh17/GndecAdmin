@@ -21,6 +21,7 @@ import android.os.Handler;
 
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
+import com.birjot.gndec_sports_admin.Fragments.introduction;
 import com.birjot.gndec_sports_admin.Fragments.posts;
 import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -43,6 +44,8 @@ public class HomeActivity extends Progressdialog
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Menu 1");
         setSupportActionBar(toolbar);
+
+        displaySelectedScreen(R.id.introduction);
 /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -217,6 +220,9 @@ public class HomeActivity extends Progressdialog
 
         //initializing the fragment object which is selected
         switch (itemId) {
+            case R.id.introduction:
+                fragment = new introduction();
+                break;
             case R.id.viewposts:
                 fragment = new posts();
                 break;
