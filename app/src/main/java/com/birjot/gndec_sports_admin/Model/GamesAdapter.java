@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.birjot.gndec_sports_admin.Activities.Graphs;
 import com.birjot.gndec_sports_admin.Activities.SignUpActivity;
 import com.birjot.gndec_sports_admin.Fragments.Games;
+import com.birjot.gndec_sports_admin.Games_Activities.BasketBall;
 import com.birjot.gndec_sports_admin.R;
 
 import java.util.ArrayList;
@@ -81,7 +82,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(context, Graphs.class);
+                        Intent intent = new Intent(context, BasketBall.class);
                         context.startActivity(intent);
 
                         break;

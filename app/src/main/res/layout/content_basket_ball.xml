@@ -8,4 +8,17 @@
     tools:context="com.birjot.gndec_sports_admin.Games_Activities.BasketBall"
     tools:showIn="@layout/activity_basket_ball">
 
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/player"
+        android:layout_width="321dp"
+        android:layout_height="177dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintHorizontal_bias="0.506" />
+
 </android.support.constraint.ConstraintLayout>
