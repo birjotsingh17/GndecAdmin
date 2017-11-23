@@ -19,9 +19,9 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Slideshow" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_facilities"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="FACILITIES" />
         <item
             android:id="@+id/nav_graph"
             android:icon="@drawable/ic_menu_manage"
