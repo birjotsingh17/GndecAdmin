@@ -226,7 +226,7 @@ public class HomeActivity extends Progressdialog
             case R.id.viewposts:
                 fragment = new posts();
                 break;
-            case R.id.nav_manage:
+            case R.id.nav_facilities:
                 fragment = new Games();
                 break;
             case R.id.nav_graph:
