@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.birjot.gndec_sports_admin.Activities.Constants;
-import com.birjot.gndec_sports_admin.Activities.Upload;
+import com.birjot.gndec_sports_admin.Model.Upload;
 import com.birjot.gndec_sports_admin.Model.MyAdapter;
 import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.database.DataSnapshot;
@@ -21,7 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 import static android.content.ContentValues.TAG;
 

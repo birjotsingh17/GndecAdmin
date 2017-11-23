@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.birjot.gndec_sports_admin.Activities.HomeActivity;
-import com.birjot.gndec_sports_admin.Activities.Upload;
 import com.birjot.gndec_sports_admin.R;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
