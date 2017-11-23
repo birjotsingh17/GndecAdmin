@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,7 @@ public class intro1 extends Fragment implements View.OnClickListener{
     //firebase objects
     private StorageReference storageReference;
     private DatabaseReference mDatabase;
+    String uploadId;
 
 
 
@@ -97,6 +99,8 @@ public class intro1 extends Fragment implements View.OnClickListener{
         textViewShow.setOnClickListener(this);
     }
 
+
+
     @Override
     public void onClick(View view) {
 
@@ -116,6 +120,22 @@ public class intro1 extends Fragment implements View.OnClickListener{
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
     }
+
+
+
+    public String getFileName(String uri){
+        int index;
+        while(uri.contains(":")){
+            index = uri.indexOf(":");
+            uri = uri.substring(index+1);
+        }
+        while (uri.contains("/")){
+            index = uri.indexOf("/");
+            uri = uri.substring(index+1);
+        }
+        return uri;
+    }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -140,16 +160,24 @@ public class intro1 extends Fragment implements View.OnClickListener{
     private void uploadFile() {
         //checking if file is available
         if (filePath != null) {
+            final String fileName = getFileName(filePath.toString());
             //displaying progress dialog while image is uploading
             final ProgressDialog progressDialog = new ProgressDialog(getActivity());
             progressDialog.setTitle("Uploading");
             progressDialog.show();
 
-            //getting the storage reference
-            StorageReference sRef = storageReference.child(Constants.STORAGE_PATH_UPLOADS + System.currentTimeMillis() + "." + getFileExtension(filePath));
+            uploadId = mDatabase.push().getKey();
 
-/*
-            https://www.simplifiedcoding.net/firebase-storage-example/*/
+            //getting the storage reference
+//            StorageReference sRef = storageReference.child(Constants.STORAGE_PATH_UPLOADS + System.currentTimeMillis() + "." + getFileExtension(filePath));
+
+            final StorageReference sRef = storageReference
+                    .child(Constants.STORAGE_PATH_UPLOADS)
+                    .child(uploadId)
+                    .child(fileName);
+
+
+/*uplifiedcoding.net/firebase-storage-example/*/
 
 
             //adding the file to reference
@@ -164,10 +192,15 @@ public class intro1 extends Fragment implements View.OnClickListener{
                             Toast.makeText(getActivity().getApplicationContext(), "File Uploaded ", Toast.LENGTH_LONG).show();
 
                             //creating the upload object to store uploaded image details
-                            Upload upload = new Upload(editTextName.getText().toString().trim(), taskSnapshot.getDownloadUrl().toString());
+                            Upload upload = new Upload(
+                                    fileName,
+                                    taskSnapshot.getDownloadUrl().toString(),
+                                    uploadId,
+                                    editTextName.getText().toString().trim()
+                                    );
 
                             //adding an upload to firebase database
-                            String uploadId = mDatabase.push().getKey();
+
                             mDatabase.child(uploadId).setValue(upload);
 
                             editTextName.setText(null);

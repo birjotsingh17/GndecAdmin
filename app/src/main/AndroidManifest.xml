@@ -3,6 +3,7 @@
     package="com.birjot.gndec_sports_admin">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +35,7 @@
         <activity
             android:name=".Games_Activities.FootBall"
             android:label="@string/title_activity_foot_ball"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

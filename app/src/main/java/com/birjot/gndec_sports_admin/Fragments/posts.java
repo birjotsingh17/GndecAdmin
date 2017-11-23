@@ -97,7 +97,7 @@ public class posts extends Fragment {
                 }
                 Collections.reverse(uploads);
                 //creating adapter
-                adapter = new MyAdapter(getActivity().getApplicationContext(), uploads);
+                adapter = new MyAdapter(getContext(), uploads);
 
                 //adding adapter to recyclerview
                 recyclerView.setAdapter(adapter);

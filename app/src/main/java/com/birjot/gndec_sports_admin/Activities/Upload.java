@@ -9,15 +9,19 @@ public class Upload {
 
     public String name;
     public String url;
+    public String key;
+    public String description;
 
     // Default constructor required for calls to
     // DataSnapshot.getValue(User.class)
     public Upload() {
     }
 
-    public Upload(String name, String url) {
+    public Upload(String name, String url, String key, String description) {
         this.name = name;
         this.url= url;
+        this.key= key;
+        this.description= description;
     }
 
     public String getName() {
@@ -28,6 +32,15 @@ public class Upload {
         return url;
     }
 
+    public String getKey() {
+        return key;
+    }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
