@@ -42,7 +42,7 @@ public class HomeActivity extends Progressdialog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Menu 1");
+        //toolbar.setTitle("Menu 1");
         setSupportActionBar(toolbar);
 
         displaySelectedScreen(R.id.introduction);
@@ -201,7 +201,17 @@ public class HomeActivity extends Progressdialog
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;
-        } else {  //calling the method displayselectedscreen and passing the id of selected menu
+        }
+        else if(id==R.id.nav_map){
+            String url = "https://lab.gdy.club/#map=19/8444713.27/3614567.83/0";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+            return true;
+        }
+
+
+        else {  //calling the method displayselectedscreen and passing the id of selected menu
             displaySelectedScreen(item.getItemId());
             //make this method blank
             return true;}
@@ -233,6 +243,7 @@ public class HomeActivity extends Progressdialog
                 Intent intent = new Intent(HomeActivity.this,Graphs.class);
                 startActivity(intent);
                 break;
+
 
         }
 

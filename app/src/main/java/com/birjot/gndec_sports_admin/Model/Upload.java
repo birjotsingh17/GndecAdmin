@@ -1,4 +1,4 @@
-package com.birjot.gndec_sports_admin.Activities;
+package com.birjot.gndec_sports_admin.Model;
 
 /**
  * Created by birjot on 6/11/17.

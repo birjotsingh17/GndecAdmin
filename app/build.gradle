@@ -30,9 +30,9 @@ dependencies {
 
 
 
+
     compile 'com.android.support:design:26.+'
     compile 'com.android.support:recyclerview-v7:26.0.0-rc1'
-
     compile 'com.android.support:design:26.+'
     compile 'com.android.support:recyclerview-v7:26.0.0-rc1'
     compile 'com.android.support:appcompat-v7:26.+'
@@ -49,6 +49,7 @@ dependencies {
     compile 'com.jjoe64:graphview:4.2.1'
     testCompile 'junit:junit:4.12'
 }
+
 
 
 
