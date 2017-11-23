@@ -42,6 +42,16 @@ public class Progressdialog extends AppCompatActivity {
         mProgressDialog.show();
     }
 
+    public void showCaptionProgressDialog(String caption) {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setMessage(caption);
+            mProgressDialog.setIndeterminate(true);
+        }
+
+        mProgressDialog.show();
+    }
+
     @Override
     public void onStop() {
         super.onStop();
