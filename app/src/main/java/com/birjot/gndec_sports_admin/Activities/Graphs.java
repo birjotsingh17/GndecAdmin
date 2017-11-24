@@ -30,12 +30,14 @@ public class Graphs extends AppCompatActivity {
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
         BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6),
-                new DataPoint(5, 16)
+                new DataPoint(0, 150),
+                new DataPoint(1, 76),
+                new DataPoint(2, 108),
+                new DataPoint(3, 170),
+                new DataPoint(4, 37),
+                new DataPoint(5, 106),
+                new DataPoint(6, 29)
+               // new DataPoint(7, 8)
         });
         graph.addSeries(series);
 
@@ -45,14 +47,17 @@ public class Graphs extends AppCompatActivity {
             public int get(DataPoint data) {
                 return Color.rgb((int) data.getX()*255/4, (int) Math.abs(data.getY()*255/6), 100);
             }
-        });
+
+        }
+
+        );
 
        // series.setSpacing(50);
 
 // draw values on top
         series.setDrawValuesOnTop(true);
         series.setValuesOnTopColor(Color.RED);
-        graph.setTitle("foo");
+       // graph.setTitle("foo");
 
 
 
@@ -61,7 +66,10 @@ public class Graphs extends AppCompatActivity {
         //gridLabel.setHorizontalAxisTitle("Various Branches");
         gridLabel.setVerticalAxisTitle("Number of Participants");
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[] {"old", "middle", "new","Fd","fdgr","vdsc"});
+
+
+        /*
+        staticLabelsFormatter.setHorizontalLabels(new String[] {"CIVIL", "ECE", "Elect.","Mech","Prod.","CSE"});*/
         //staticLabelsFormatter.setVerticalLabels(new String[] {"low", "middle", "high"});
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 

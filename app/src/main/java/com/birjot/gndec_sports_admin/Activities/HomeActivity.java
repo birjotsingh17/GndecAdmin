@@ -20,6 +20,7 @@ import android.widget.Toast;
 import android.os.Handler;
 
 import com.birjot.gndec_sports_admin.Fragments.Games;
+import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.introduction;
 import com.birjot.gndec_sports_admin.Fragments.posts;
@@ -240,8 +241,9 @@ public class HomeActivity extends Progressdialog
                 fragment = new Games();
                 break;
             case R.id.nav_graph:
-                Intent intent = new Intent(HomeActivity.this,Graphs.class);
-                startActivity(intent);
+                fragment = new GraphFragment();
+               /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
+                startActivity(intent);*/
                 break;
 
 
