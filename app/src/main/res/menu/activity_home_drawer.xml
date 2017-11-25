@@ -19,9 +19,13 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="FACILITIES" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_records"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="EXISTING RECORDS" />
+        <item
+            android:id="@+id/nav_scholarships"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="SCHOLARSHIPS" />
         <item
             android:id="@+id/nav_graph"
             android:icon="@drawable/ic_menu_manage"
@@ -42,7 +46,12 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="SHARE" />
+            <item
+                android:id="@+id/nav_madeby"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="DEVELOPERS"
+                />
 
         </menu>
     </item>

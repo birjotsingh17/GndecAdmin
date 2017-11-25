@@ -21,6 +21,7 @@ import android.os.Handler;
 
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
+import com.birjot.gndec_sports_admin.Fragments.Records;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.introduction;
 import com.birjot.gndec_sports_admin.Fragments.posts;
@@ -239,6 +240,9 @@ public class HomeActivity extends Progressdialog
                 break;
             case R.id.nav_facilities:
                 fragment = new Games();
+                break;
+            case R.id.nav_records:
+                fragment = new Records();
                 break;
             case R.id.nav_graph:
                 fragment = new GraphFragment();
