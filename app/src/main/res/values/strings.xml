@@ -240,5 +240,6 @@
 
         </string>
     <string name="title_activity_delete">delete</string>
+    <string name="title_activity_made_by">MadeByActivity</string>
 
 </resources>
