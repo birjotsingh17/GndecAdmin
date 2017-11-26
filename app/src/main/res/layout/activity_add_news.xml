@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.birjot.gndec_sports_admin.Activities.AddNews">
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD NEWS"
+        android:textSize="20dp"
+        android:paddingTop="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorheadig"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/newshead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorheadig"
+        android:textStyle="bold"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Heading" />
+
+    <EditText
+        android:id="@+id/newsdes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:ems="10"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/addnews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add News" />
+</LinearLayout>

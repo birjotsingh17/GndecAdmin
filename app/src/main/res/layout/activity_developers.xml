@@ -86,7 +86,7 @@
             android:id="@+id/DP2"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:src="@drawable/nikhil"
+            android:src="@drawable/birjot"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp" />
 
