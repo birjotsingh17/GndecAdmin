@@ -24,6 +24,7 @@ import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.introduction;
+import com.birjot.gndec_sports_admin.Fragments.lookforLastestnews;
 import com.birjot.gndec_sports_admin.Fragments.posts;
 import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -119,11 +120,11 @@ public class HomeActivity extends Progressdialog
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+       /* if (id == R.id.action_settings) {
             return true;
         }
 
-        else if (id == R.id.action_logout) {
+        else*/ if (id == R.id.action_logout) {
 
 
             showProgressDialog();
@@ -149,10 +150,11 @@ public class HomeActivity extends Progressdialog
             case R.id.addpost:
                 fragment = new intro1();
                 break;
-            /*case R.id.nav_menu2:
-                fragment = new Menu2();
+            case R.id.addnews:
+                Intent intent = new Intent(HomeActivity.this,AddNews.class);
+                startActivity(intent);
                 break;
-            case R.id.nav_menu3:
+          /*  case R.id.nav_menu3:
                 fragment = new Menu3();
                 break;*/
         }
@@ -244,6 +246,14 @@ public class HomeActivity extends Progressdialog
             case R.id.nav_records:
                 fragment = new Records();
                 break;
+            case R.id.latestnews:
+                fragment = new lookforLastestnews();
+                break;
+            case R.id.nav_madeby:
+                Intent intent = new Intent(HomeActivity.this,Developers.class);
+                startActivity(intent);
+                break;
+
             case R.id.nav_graph:
                 fragment = new GraphFragment();
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);

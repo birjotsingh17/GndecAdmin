@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="COMMITEE" />
         <item
+            android:id="@+id/latestnews"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="LATEST NEWS" />
+        <item
             android:id="@+id/viewposts"
             android:icon="@drawable/ic_menu_camera"
             android:title="ACHIEVEMENTS" />
