@@ -2,6 +2,7 @@ package com.birjot.gndec_sports_admin.Activities;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,9 @@ import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class AddNews extends Progressdialog {
 
 
@@ -19,6 +23,8 @@ public class AddNews extends Progressdialog {
     private EditText newsHead, ewsdesc;
 
     private DatabaseReference mDatabase;
+
+    private static String uploaddate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +63,7 @@ public class AddNews extends Progressdialog {
         }
 
 
+        uploaddate = FindCurrentDate();
 
         // Disable button so there are no multi-posts
         /*setEditingEnabled(false);
@@ -68,6 +75,7 @@ public class AddNews extends Progressdialog {
         nload.setReg_token(mDatabase.child("news").push().getKey());
         nload.setHeading(newsHead.getText().toString());
         nload.setDescription(ewsdesc.getText().toString());
+        nload.setDatee(uploaddate.toString());
         mDatabase.child("news").child(nload.getReg_token()).setValue(nload);
         newsHead.setText(null);
         ewsdesc.setText(null);
@@ -84,6 +92,13 @@ public class AddNews extends Progressdialog {
 
     }
 
+
+    String FindCurrentDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String currentdate = dateFormat.format(new Date());
+        Log.i("test", currentdate);
+
+        return currentdate;}
 
 
    /* public String getRegToken() {
