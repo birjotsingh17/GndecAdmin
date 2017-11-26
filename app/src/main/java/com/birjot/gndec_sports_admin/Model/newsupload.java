@@ -10,6 +10,7 @@ public class newsupload {
     public String heading;
     public String description;
     private String reg_token;
+    public String datee;
 
     public newsupload(){
 
@@ -41,12 +42,21 @@ public class newsupload {
         this.reg_token = reg_token;
     }
 
+    public String getDatee() {
+        return datee;
+    }
+
+    public void setDatee(String datee) {
+        this.datee = datee;
+    }
+
     @Override
     public String toString() {
         return "newsupload{" +
                 "heading='" + heading + '\'' +
                 ", reg_token='" + reg_token + '\'' +
                 ", description='" + description + '\'' +
+                ", datee='" + datee + '\'' +
                 '}';
     }
 }
