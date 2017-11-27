@@ -13,11 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.SigninActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activities.SignUpActivity" />
         <activity
@@ -37,7 +33,16 @@
             android:label="@string/title_activity_foot_ball"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.Developers" />
-        <activity android:name=".Activities.AddNews"></activity>
+        <activity android:name=".Activities.AddNews" />
+        <activity android:name=".Activities.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
