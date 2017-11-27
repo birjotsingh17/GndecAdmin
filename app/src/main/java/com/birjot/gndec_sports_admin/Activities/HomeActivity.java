@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import android.os.Handler;
 
+import com.birjot.gndec_sports_admin.Activities.AddNews;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
@@ -151,7 +152,7 @@ public class HomeActivity extends Progressdialog
                 fragment = new intro1();
                 break;
             case R.id.addnews:
-                Intent intent = new Intent(HomeActivity.this,AddNews.class);
+                Intent intent = new Intent(HomeActivity.this, AddNews.class);
                 startActivity(intent);
                 break;
           /*  case R.id.nav_menu3:

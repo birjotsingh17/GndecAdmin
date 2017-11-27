@@ -1,5 +1,7 @@
 package com.birjot.gndec_sports_admin.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.birjot.gndec_sports_admin.Model.Upload;
 import com.birjot.gndec_sports_admin.Model.newsupload;
 import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.database.DatabaseReference;
@@ -40,11 +43,35 @@ public class AddNews extends Progressdialog {
         addnews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 submitPost();
 
             }
         });
     }
+
+    void showDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage("News Posted Successfully!");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                newsHead.setText(null);
+                ewsdesc.setText(null);
+
+
+            }
+        });
+
+        builder.setCancelable(false);
+        builder.create().show();
+
+    }
+
+
 
     private void submitPost() {
         final String title = newsHead.getText().toString();
@@ -77,8 +104,9 @@ public class AddNews extends Progressdialog {
         nload.setDescription(ewsdesc.getText().toString());
         nload.setDatee(uploaddate.toString());
         mDatabase.child("news").child(nload.getReg_token()).setValue(nload);
-        newsHead.setText(null);
-        ewsdesc.setText(null);
+
+
+        showDialog();
 
         /*ewsupload nload = new newsupload(
                 newsHead.getText().toString().trim(),
