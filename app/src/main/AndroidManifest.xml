@@ -46,6 +46,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.Athletics" />
+        <activity android:name=".Activities.AddMeetNews"></activity>
     </application>
 
 </manifest>
