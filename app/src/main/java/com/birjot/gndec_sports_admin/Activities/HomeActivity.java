@@ -254,6 +254,10 @@ public class HomeActivity extends Progressdialog
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
                 startActivity(intent);
                 break;
+            case R.id.nav_athletics:
+                Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
+                startActivity(intent5);
+                break;
 
             case R.id.nav_graph:
                 fragment = new GraphFragment();
