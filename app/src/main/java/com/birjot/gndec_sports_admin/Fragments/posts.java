@@ -45,7 +45,7 @@ public class posts extends Fragment {
     private ProgressDialog progressDialog;
 
     //list to hold all the uploaded images
-    private ArrayList<Upload> uploads;
+
 
     public posts() {
         // Required empty public constructor
@@ -73,8 +73,6 @@ public class posts extends Fragment {
 
         progressDialog = new ProgressDialog(getActivity());
 
-        uploads = new ArrayList<>();
-
         //displaying progress dialog while fetching images
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
@@ -86,6 +84,9 @@ public class posts extends Fragment {
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
+
+
+               ArrayList<Upload> uploads = new ArrayList<Upload>();
                 //dismissing the progress dialog
                 progressDialog.dismiss();
 

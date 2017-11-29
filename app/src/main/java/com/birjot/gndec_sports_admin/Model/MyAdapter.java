@@ -133,8 +133,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
-                Intent intent = new Intent(context, HomeActivity.class);
-                context.startActivity(intent);
+            /*    Intent intent = new Intent(context, HomeActivity.class);
+                context.startActivity(intent);*/
                 hideProgressDialog();
             }
         }).addOnFailureListener(new OnFailureListener() {

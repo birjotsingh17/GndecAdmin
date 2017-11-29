@@ -104,8 +104,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
 
 
-        Intent intent = new Intent(context, HomeActivity.class);
-        context.startActivity(intent);
+       /* Intent intent = new Intent(context, HomeActivity.class);
+        context.startActivity(intent);*/
 
     }
 
