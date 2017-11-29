@@ -36,7 +36,7 @@ import static android.content.ContentValues.TAG;
  */
 public class lookforLastestnews extends Fragment {
 
-    private ArrayList<newsupload> nloads;
+
 
     private RecyclerView recyclerView1;
 
@@ -74,7 +74,7 @@ public class lookforLastestnews extends Fragment {
 
         progressDialog = new ProgressDialog(getActivity());
 
-        nloads = new ArrayList<>();
+
 
         //displaying progress dialog while fetching images
         progressDialog.setMessage("Please wait...");
@@ -87,6 +87,8 @@ public class lookforLastestnews extends Fragment {
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
+
+                ArrayList<newsupload> nloads= new ArrayList<newsupload>();
                 //dismissing the progress dialog
                 progressDialog.dismiss();
 
