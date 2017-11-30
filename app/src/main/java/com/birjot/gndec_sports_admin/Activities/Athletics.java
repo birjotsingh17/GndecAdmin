@@ -11,9 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.birjot.gndec_sports_admin.Fragments.Records;
+import com.birjot.gndec_sports_admin.Fragments.intro1;
+import com.birjot.gndec_sports_admin.Fragments.lookformeetnews;
 import com.birjot.gndec_sports_admin.Model.ViewPagerAdapter;
 import com.birjot.gndec_sports_admin.R;
 
@@ -23,6 +26,8 @@ import java.util.TimerTask;
 public class Athletics extends AppCompatActivity  {
 
     ViewPager viewPager;
+
+    private Button newsath, resultsath, recordsath;
 
     int currentPage = 0;
     Timer timer;
@@ -34,6 +39,8 @@ public class Athletics extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        submitPost3();
 
         setTitle("ATHLETIC MEET");
 
@@ -69,6 +76,40 @@ public class Athletics extends AppCompatActivity  {
             }
         }, DELAY_MS, PERIOD_MS);
 
+
+        newsath=(Button) findViewById(R.id.newsath);
+        recordsath=(Button) findViewById(R.id.recordsath);
+        resultsath=(Button) findViewById(R.id.resultsath);
+
+        recordsath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                submitPost1();
+
+            }
+        });
+
+        resultsath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                submitPost2();
+
+            }
+        });
+
+        newsath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                submitPost3();
+
+            }
+        });
+
+
+
     }
     public boolean onSupportNavigateUp(){
         onBackPressed();
@@ -80,6 +121,48 @@ public class Athletics extends AppCompatActivity  {
         Intent intent = new Intent(this,Developers.class);
         startActivity(intent);
         }
+
+        private void submitPost1(){
+            Fragment fragment = null;
+            fragment = new Records();
+
+
+            if (fragment != null) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frameath, fragment);
+                ft.commit();
+
+        }}
+
+    private void submitPost2() {
+        Toast.makeText(this, "working1", Toast.LENGTH_SHORT).show();
+
+        Fragment fragment = null;
+        fragment = new intro1();
+
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frameath, fragment);
+            ft.commit();
+
+        }
+    }
+
+    private void submitPost3(){
+
+        Fragment fragment = null;
+        fragment = new lookformeetnews();
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frameath, fragment);
+            ft.commit();
+
+        }
+
+
+    }
     }
 
 

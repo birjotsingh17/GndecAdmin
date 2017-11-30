@@ -249,14 +249,8 @@ public class HomeActivity extends Progressdialog
             case R.id.nav_facilities:
                 fragment = new Games();
                 break;
-            case R.id.nav_records:
-                fragment = new Records();
-                break;
             case R.id.latestnews:
                 fragment = new lookforLastestnews();
-                break;
-            case R.id.latestmeetnews:
-                fragment = new lookformeetnews();
                 break;
             case R.id.nav_madeby:
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
@@ -266,7 +260,6 @@ public class HomeActivity extends Progressdialog
                 Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
                 startActivity(intent5);
                 break;
-
             case R.id.nav_graph:
                 fragment = new GraphFragment();
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
