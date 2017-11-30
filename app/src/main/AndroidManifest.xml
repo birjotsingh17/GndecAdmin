@@ -46,7 +46,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.Athletics" />
-        <activity android:name=".Activities.AddMeetNews"></activity>
+        <activity android:name=".Activities.AddMeetNews" />
+        <activity android:name=".Activities.ContactUs"></activity>
     </application>
 
 </manifest>
