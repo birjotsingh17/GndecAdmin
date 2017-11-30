@@ -23,9 +23,10 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="FACILITIES" />
         <item
-            android:id="@+id/nav_records"
+            android:id="@+id/nav_athletics"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="EXISTING RECORDS" />
+            android:title="ATHLETIC MEET" />
+
         <item
             android:id="@+id/nav_scholarships"
             android:icon="@drawable/ic_menu_slideshow"

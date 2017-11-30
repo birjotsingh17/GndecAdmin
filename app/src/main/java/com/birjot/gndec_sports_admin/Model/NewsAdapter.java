@@ -97,9 +97,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         DatabaseReference globalRef = mDatabase.child("news").child(newss.getReg_token());
+        DatabaseReference globalRef1 = mDatabase.child("meet_news").child(newss.getReg_token());
         Log.d("app", "onSuccess: "+globalRef.toString());
         //DatabaseReference userPdfRef = mDatabase.child(getString(R.string.DB_user_pdfs)).child(pdf.getUid()).child(upload.getKey());
         deleteOnFirebaseDB(globalRef);
+        deleteOnFirebaseDB(globalRef1);
         // deletePdfOnFirebaseDB(userPdfRef);
 
 

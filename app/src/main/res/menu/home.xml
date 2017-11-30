@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/addnews"
-        android:orderInCategory="100"
-        android:title="Add News"
-        app:showAsAction="never" />
-
-
-    <item
-        android:id="@+id/action_logout"
-        android:orderInCategory="100"
-        android:title="Logout"
-        app:showAsAction="never" />
 
     <item
         android:id="@+id/addpost"
@@ -20,5 +8,22 @@
         android:title="Add Post"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/addnews"
+        android:orderInCategory="100"
+        android:title="Add News"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/addmeetnews"
+        android:orderInCategory="100"
+        android:title="Add Meet News"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="Logout"
+        app:showAsAction="never" />
 
 </menu>
