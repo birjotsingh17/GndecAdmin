@@ -14,14 +14,7 @@
             android:id="@+id/latestnews"
             android:icon="@drawable/libnewsicon"
             android:title="LATEST NEWS" />
-        <item
-            android:id="@+id/viewposts"
-            android:icon="@drawable/achiicon"
-            android:title="ACHIEVEMENTS" />
-        <item
-            android:id="@+id/viewposts11"
-            android:icon="@drawable/achiicon"
-            android:title="EXTRA-ACHIEVEMENTS" />
+
         <item
             android:id="@+id/nav_facilities"
             android:icon="@drawable/achieveicon"
@@ -43,6 +36,22 @@
 
 
     </group>
+
+    <item android:title="Achievements">
+        <menu>
+
+            <item
+                android:id="@+id/viewposts"
+                android:icon="@drawable/achiicon"
+                android:title="INTRAMURAL" />
+            <item
+                android:id="@+id/viewposts11"
+                android:icon="@drawable/achiicon"
+                android:title="EXTRAMURAL" />
+
+
+        </menu>
+    </item>
 
     <item android:title="Communicate">
         <menu>
