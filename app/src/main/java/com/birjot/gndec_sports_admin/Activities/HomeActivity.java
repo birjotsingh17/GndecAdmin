@@ -20,9 +20,11 @@ import android.widget.Toast;
 import android.os.Handler;
 
 import com.birjot.gndec_sports_admin.Activities.AddNews;
+import com.birjot.gndec_sports_admin.Fragments.Extramural;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
+import com.birjot.gndec_sports_admin.Fragments.extraposts;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.introduction;
 import com.birjot.gndec_sports_admin.Fragments.lookforLastestnews;
@@ -152,6 +154,9 @@ public class HomeActivity extends Progressdialog
             case R.id.addpost:
                 fragment = new intro1();
                 break;
+            case R.id.addpostextra:
+                fragment = new Extramural();
+                break;
             case R.id.addnews:
                 Intent intent = new Intent(HomeActivity.this, AddNews.class);
                 startActivity(intent);
@@ -245,6 +250,9 @@ public class HomeActivity extends Progressdialog
                 break;
             case R.id.viewposts:
                 fragment = new posts();
+                break;
+            case R.id.viewposts11:
+                fragment = new extraposts();
                 break;
             case R.id.nav_facilities:
                 fragment = new Games();
