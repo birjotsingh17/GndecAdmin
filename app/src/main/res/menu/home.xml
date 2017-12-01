@@ -5,9 +5,14 @@
     <item
         android:id="@+id/addpost"
         android:orderInCategory="100"
-        android:title="Add Post"
+        android:title="Add Intramural"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/addpostextra"
+        android:orderInCategory="100"
+        android:title="Add Extramural"
+        app:showAsAction="never" />
     <item
         android:id="@+id/addnews"
         android:orderInCategory="100"

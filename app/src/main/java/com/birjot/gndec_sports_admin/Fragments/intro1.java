@@ -39,7 +39,7 @@ import static android.app.Activity.RESULT_OK;
 /**
  * Created by birjot on 5/11/17.
  *
- * It is a fragment which is used to add posts from admin app
+ * It is a fragment which is used to add intramural posts from admin app
  */
 
 public class intro1 extends Fragment implements View.OnClickListener{

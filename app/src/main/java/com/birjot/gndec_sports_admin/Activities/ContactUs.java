@@ -1,7 +1,10 @@
 package com.birjot.gndec_sports_admin.Activities;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.birjot.gndec_sports_admin.R;
 
@@ -19,6 +22,13 @@ public class ContactUs extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         onBackPressed();
         return true;
+    }
+
+    public void openmail(View view){
+        Intent emailintent = new Intent(Intent.ACTION_SEND);
+        emailintent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"gndecsports@gmail.com"});
+        emailintent.setType("text/plain");
+        startActivity(emailintent);
     }
 }
 

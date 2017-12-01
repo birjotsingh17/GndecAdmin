@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:orientation="vertical"
     android:background="@drawable/signin1"
-    tools:context="com.birjot.gndec_sports.Activities.SigninActivity">
+    tools:context="com.birjot.gndec_sports_admin.Activities.SigninActivity">
 
     <!--<ImageView
         android:id="@+id/imageView"
@@ -78,7 +79,8 @@
 
     <Button
         android:id="@+id/ButtonSignIn"
-        android:layout_width="wrap_content"
+        android:theme="@style/ButtonStyle"
+        android:layout_width="match_parent"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
