@@ -43,12 +43,12 @@ public class Games extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.Recycle);
 
-        GamesModel u1 = new GamesModel(R.drawable.basket,"BASKETBALL COURT");
-        GamesModel u2 = new GamesModel(R.drawable.cricket,"CRICKET PITCH");
-        GamesModel u3 = new GamesModel(R.drawable.football,"FOOTBALL GROUND");
-        GamesModel u4 = new GamesModel(R.drawable.basket,"HANDBALL GROUND");
-        GamesModel u5 = new GamesModel(R.drawable.cricket,"HOCKEY GROUND");
-        GamesModel u6 = new GamesModel(R.drawable.football,"ATHLETICS TRACK");
+        GamesModel u1 = new GamesModel(R.drawable.basket,"HOCKEY GROUND");
+        GamesModel u2 = new GamesModel(R.drawable.cricket,"VOLLEYBALL COURT");
+        GamesModel u3 = new GamesModel(R.drawable.football,"GYM");
+        GamesModel u4 = new GamesModel(R.drawable.basket,"LAWNTENNIS COURT");
+        GamesModel u5 = new GamesModel(R.drawable.cricket,"BILLIARDS ROOM");
+        GamesModel u6 = new GamesModel(R.drawable.football,"FOOTBALL GROUND");
 
 
 

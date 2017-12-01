@@ -1,5 +1,6 @@
 package com.birjot.gndec_sports_admin.Fragments;
 
+
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -37,12 +38,11 @@ import java.io.IOException;
 import static android.app.Activity.RESULT_OK;
 
 /**
- * Created by birjot on 5/11/17.
- *
- * It is a fragment which is used to add intramural posts from admin app
+ * A simple {@link Fragment} subclass.
  */
 
-public class intro1 extends Fragment implements View.OnClickListener{
+
+public class Extramural extends Fragment implements View.OnClickListener{
 
 
     private static final int PICK_IMAGE_REQUEST = 234;
@@ -70,7 +70,7 @@ public class intro1 extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //returning our layout file
         //change R.layout.yourlayoutfilename for each of your fragments
-        return inflater.inflate(R.layout.fragment_intro1, container, false);
+        return inflater.inflate(R.layout.fragment_extramural, container, false);
 
 
     }
@@ -79,7 +79,7 @@ public class intro1 extends Fragment implements View.OnClickListener{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("INTRODUCTION");
+        //getActivity().setTitle("INTRODUCTION");
 
 
 
@@ -91,7 +91,7 @@ public class intro1 extends Fragment implements View.OnClickListener{
         textViewShow = (TextView) getView().findViewById(R.id.textViewShow);
 
         storageReference = FirebaseStorage.getInstance().getReference();
-        mDatabase = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
+        mDatabase = FirebaseDatabase.getInstance().getReference("extramural");
 
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
@@ -106,7 +106,7 @@ public class intro1 extends Fragment implements View.OnClickListener{
         if (view == buttonChoose) {
             showFileChooser();
         } else if (view == buttonUpload) {
-                uploadFile();
+            uploadFile();
         } else if (view == textViewShow) {
 
         }
@@ -196,7 +196,7 @@ public class intro1 extends Fragment implements View.OnClickListener{
                                     taskSnapshot.getDownloadUrl().toString(),
                                     uploadId,
                                     editTextName.getText().toString().trim()
-                                    );
+                            );
 
                             //adding an upload to firebase database
 
@@ -227,7 +227,3 @@ public class intro1 extends Fragment implements View.OnClickListener{
     }
 
 }
-
-
-
-

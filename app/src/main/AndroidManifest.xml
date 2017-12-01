@@ -46,7 +46,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.Athletics" />
-        <activity android:name=".Activities.AddMeetNews"></activity>
+        <activity android:name=".Activities.AddMeetNews" />
+        <activity android:name=".Activities.ContactUs" />
+        <activity android:name=".Games_Activities.LawnTennis" />
+        <activity android:name=".Games_Activities.Swimming" />
+        <activity android:name=".Games_Activities.gym" />
+        <activity android:name=".Games_Activities.chess" />
+        <activity android:name=".Games_Activities.volleyball" />
+        <activity android:name=".Games_Activities.cricket" />
+        <activity android:name=".Games_Activities.billiards"></activity>
     </application>
 
 </manifest>
