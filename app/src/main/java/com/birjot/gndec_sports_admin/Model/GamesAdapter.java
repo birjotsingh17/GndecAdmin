@@ -20,6 +20,12 @@ import com.birjot.gndec_sports_admin.Activities.Graphs;
 import com.birjot.gndec_sports_admin.Activities.SignUpActivity;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Games_Activities.BasketBall;
+import com.birjot.gndec_sports_admin.Games_Activities.FootBall;
+import com.birjot.gndec_sports_admin.Games_Activities.Hockey;
+import com.birjot.gndec_sports_admin.Games_Activities.LawnTennis;
+import com.birjot.gndec_sports_admin.Games_Activities.billiards;
+import com.birjot.gndec_sports_admin.Games_Activities.gym;
+import com.birjot.gndec_sports_admin.Games_Activities.volleyball;
 import com.birjot.gndec_sports_admin.R;
 
 import java.util.ArrayList;
@@ -82,40 +88,80 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(context, BasketBall.class);
+                        Intent intent = new Intent(context, gym.class);
                         context.startActivity(intent);
 
                         break;
                     case 1:
-                        Intent intent1 = new Intent(context, Graphs.class);
+                        Intent intent1 = new Intent(context, volleyball.class);
                         context.startActivity(intent1);
 
                         break;
 
                     case 2:
-                        Intent intent2 = new Intent(context, Graphs.class);
+                        Intent intent2 = new Intent(context, Hockey.class);
                         context.startActivity(intent2);
 
                         break;
 
                     case 3:
-                        Intent intent3 = new Intent(context, Graphs.class);
+                        Intent intent3 = new Intent(context, LawnTennis.class);
                         context.startActivity(intent3);
 
                         break;
 
                     case 4:
-                        Intent intent4 = new Intent(context, Graphs.class);
+                        Intent intent4 = new Intent(context, billiards.class);
                         context.startActivity(intent4);
 
                         break;
 
                     case 5:
-                        Intent intent5 = new Intent(context, SignUpActivity.class);
+                        Intent intent5 = new Intent(context, FootBall.class);
                         context.startActivity(intent5);
 
                         break;
 
+                    case 6:
+                        Intent intent6 = new Intent(context, gym.class);
+                        context.startActivity(intent6);
+
+                        break;
+                    case 7:
+                        Intent intent7 = new Intent(context, volleyball.class);
+                        context.startActivity(intent7);
+
+                        break;
+
+                    case 8:
+                        Intent intent8 = new Intent(context, Hockey.class);
+                        context.startActivity(intent8);
+
+                        break;
+
+                    case 9:
+                        Intent intent9 = new Intent(context, LawnTennis.class);
+                        context.startActivity(intent9);
+
+                        break;
+
+                    case 10:
+                        Intent intent10 = new Intent(context, billiards.class);
+                        context.startActivity(intent10);
+
+                        break;
+
+                    case 11:
+                        Intent intent11 = new Intent(context, FootBall.class);
+                        context.startActivity(intent11);
+
+                        break;
+
+                    case 12:
+                        Intent intent12 = new Intent(context, FootBall.class);
+                        context.startActivity(intent12);
+
+                        break;
                 }
 
             }
