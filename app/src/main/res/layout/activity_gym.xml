@@ -63,7 +63,8 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="357dp"
@@ -71,14 +72,32 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/gym3"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gym"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gym2"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
 
 
     </LinearLayout>
 
 
+
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="354dp"
@@ -86,23 +105,15 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/gym2"/>
 
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gym3"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="349dp"
-            android:layout_height="233dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/gym1"/>
-
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"

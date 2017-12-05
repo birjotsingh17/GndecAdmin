@@ -10,6 +10,16 @@ public class gym extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
         setContentView(R.layout.activity_gym);
+    }
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 }

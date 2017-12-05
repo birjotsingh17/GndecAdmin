@@ -165,6 +165,10 @@ public class HomeActivity extends Progressdialog
                 Intent intent2 = new Intent(HomeActivity.this, AddMeetNews.class);
                 startActivity(intent2);
                 break;
+            case R.id.addmeetresults:
+                Intent intent3 = new Intent(HomeActivity.this, UploadPdfActivity.class);
+                startActivity(intent3);
+                break;
           /*  case R.id.nav_menu3:
                 fragment = new Menu3();
                 break;*/

@@ -32,6 +32,12 @@ public class AddNews extends Progressdialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
         setContentView(R.layout.activity_add_news);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -48,6 +54,12 @@ public class AddNews extends Progressdialog {
 
             }
         });
+
+    }
+
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 
     void showDialog(){

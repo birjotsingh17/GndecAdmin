@@ -49,15 +49,15 @@ public class Games extends Fragment {
         GamesModel u5 = new GamesModel(R.drawable.billiardsb,"BILLIARDS");
         GamesModel u6 = new GamesModel(R.drawable.football,"FOOTBALL");
 
-        GamesModel u7 = new GamesModel(R.drawable.football,"BASKETBALL");
-        GamesModel u8 = new GamesModel(R.drawable.football,"CRICKET");
-        GamesModel u9 = new GamesModel(R.drawable.football,"SWIMING");
-        GamesModel u10 = new GamesModel(R.drawable.football,"CHESS");
-        GamesModel u11 = new GamesModel(R.drawable.football,"HANDBALL");
-        GamesModel u12 = new GamesModel(R.drawable.football,"CYCLING");
-        GamesModel u13 = new GamesModel(R.drawable.football,"BADMINTON");
-        GamesModel u14 = new GamesModel(R.drawable.football,"KABBADI");
-        GamesModel u15 = new GamesModel(R.drawable.football,"SHOOTING");
+        GamesModel u7 = new GamesModel(R.drawable.basket,"BASKETBALL");
+        GamesModel u8 = new GamesModel(R.drawable.batball,"CRICKET");
+        GamesModel u9 = new GamesModel(R.drawable.swiming,"SWIMING");
+        GamesModel u10 = new GamesModel(R.drawable.chess,"CHESS");
+        GamesModel u11 = new GamesModel(R.drawable.handball,"HANDBALL");
+        GamesModel u12 = new GamesModel(R.drawable.cycling,"CYCLING");
+        GamesModel u13 = new GamesModel(R.drawable.badminton,"BADMINTON");
+        GamesModel u14 = new GamesModel(R.drawable.kabbaddi,"KABADDI");
+        GamesModel u15 = new GamesModel(R.drawable.shooting,"SHOOTING");
 
 
         userlist = new ArrayList<GamesModel>();

@@ -84,7 +84,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="sign in" />
+        android:text="SIGN IN" />
 
 <!--
 

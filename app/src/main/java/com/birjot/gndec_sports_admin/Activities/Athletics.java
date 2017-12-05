@@ -60,7 +60,7 @@ public class Athletics extends AppCompatActivity  {
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
-                if (currentPage == 4-1) {
+                if (currentPage == 10-1) {
                     currentPage = 0;
                 }
                 viewPager.setCurrentItem(currentPage++, true);
@@ -111,6 +111,8 @@ public class Athletics extends AppCompatActivity  {
 
 
     }
+
+
     public boolean onSupportNavigateUp(){
         onBackPressed();
         return true;
