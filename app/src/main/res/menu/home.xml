@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
+   <!-- <item
         android:id="@+id/addpost"
         android:orderInCategory="100"
         android:title="Add Intramural"
@@ -29,7 +29,7 @@
         android:id="@+id/addmeetresults"
         android:orderInCategory="100"
         android:title="Add Meet Results"
-        app:showAsAction="never" />
+        app:showAsAction="never" />-->
 
     <item
         android:id="@+id/action_logout"
