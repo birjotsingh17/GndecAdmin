@@ -39,7 +39,7 @@ public class MyUploadService extends MyBaseTaskService{
     public static final String EXTRA_DOWNLOAD_URL = "extra_download_url";
 
     public static String description;
-    public static String uid;
+    //public static String uid;
     //public static String username;
     private static double pdfsize;
     private static String uploaddate;
@@ -62,11 +62,12 @@ public class MyUploadService extends MyBaseTaskService{
         Log.d(TAG, "onStartCommand:intent: " + intent + ":startId: " + startId);
         if (ACTION_UPLOAD.equals(intent.getAction())) {
             description = intent.getStringExtra("description");
-            uid = intent.getStringExtra("uid");
+           // uid = intent.getStringExtra("uid");
            // username = intent.getStringExtra("username");
             pdfkey = intent.getStringExtra("pdfkey");
+//            Log.d("app","pdfkey"+pdfkey);
             pdfname = intent.getStringExtra("pdfname");
-
+            Log.d("app","pdfname"+pdfname);
             Uri fileUri = intent.getParcelableExtra(EXTRA_FILE_URI);
             uploadFromUri(fileUri);
         }
@@ -83,10 +84,18 @@ public class MyUploadService extends MyBaseTaskService{
 
         // Get a reference to store file at photos/<FILENAME>.jpg
         final StorageReference pdfref = mStorageRef
-                .child(uid)
+                .child("pdfupload")
+               /* .child(uid)*/
                 .child(pdfkey)
                 .child(pdfname);
 
+       // Log.d("app","uid test"+uid);
+
+        Log.d("app","pdfkey test"+pdfkey);
+
+        Log.d("app","pdfname test"+pdfname);
+
+        Log.d("app", "uploadFromUri: cghcking " +fileUri);
         // Upload file to Firebase Storage
         pdfref.putFile(fileUri).
                 addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -101,16 +110,16 @@ public class MyUploadService extends MyBaseTaskService{
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         // Upload succeeded
-                        Log.d(TAG, "OnSuccessListener");
+                        Log.d("app", "OnSuccessListener");
 
                         //  Get the public download URL
                         Uri downloadUri = taskSnapshot.getMetadata().getDownloadUrl();
-                        Log.d(TAG, "downloadUri: " + downloadUri);
+                        Log.d("app", "downloadUri: " + downloadUri);
 
                         // Get the file size
                         pdfsize = taskSnapshot.getMetadata().getSizeBytes();
                         pdfsize = pdfsize/1048576;
-                        Log.d(TAG, "onSuccess: fileSize"+pdfsize);
+                        Log.d("app", "onSuccess: fileSize"+pdfsize);
 
 
                         uploaddate = FindCurrentDate();
@@ -132,7 +141,7 @@ public class MyUploadService extends MyBaseTaskService{
                     @Override
                     public void onFailure(@NonNull Exception exception) {
                         // Upload failed
-                        Log.w(TAG, "uploadFromUri:onFailure", exception.getCause());
+                        Log.w("app", "uploadFromUri:onFailure", exception.getCause());
 
                         // [START_EXCLUDE]
                         broadcastUploadFinished(null, fileUri);
@@ -167,6 +176,7 @@ public class MyUploadService extends MyBaseTaskService{
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
         boolean success = downloadUrl != null;
+        Log.d("app","boolsuccess"+success);
         String caption = success ? getString(R.string.upload_success) : getString(R.string.upload_failure);
         showFinishedNotificationupload(Title,caption, intent, success);
     }
@@ -183,7 +193,7 @@ public class MyUploadService extends MyBaseTaskService{
             Pdf pdf = new Pdf(
                 pdfname,
                 description,
-                uid,
+               /* uid,*/
                 downloadUrl,
                 //username,
                 pdfsize,
@@ -193,7 +203,7 @@ public class MyUploadService extends MyBaseTaskService{
         Log.d(TAG, "" + pdf);
 
         dbref.child(getString(R.string.DB_Pdfs)).child(pdfkey).setValue(pdf);
-        dbref.child(getString(R.string.DB_user_pdfs)).child(uid).child(pdfkey).setValue(pdf);
+      /*  dbref.child(getString(R.string.DB_user_pdfs))*//*.child(uid)*//*.child(pdfkey).setValue(pdf);*/
     }
 
     String FindCurrentDate() {

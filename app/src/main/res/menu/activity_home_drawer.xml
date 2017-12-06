@@ -28,6 +28,7 @@
             android:id="@+id/nav_scholarships"
             android:icon="@drawable/scholaricon"
             android:title="SCHOLARSHIPS" />
+
         <item
             android:id="@+id/nav_graph"
             android:icon="@drawable/graphicon"

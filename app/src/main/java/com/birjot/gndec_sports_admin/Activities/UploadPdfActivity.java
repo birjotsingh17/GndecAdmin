@@ -107,6 +107,8 @@ public class UploadPdfActivity extends Progressdialog {
             if (resultCode == RESULT_OK) {
                 mFileUri = data.getData();
 
+                Log.d("app","mFileUri"+mFileUri);
+
                 if (mFileUri != null) {
                     selectPdf.setError(null);
                     pdfName.setError(null);
@@ -129,15 +131,19 @@ public class UploadPdfActivity extends Progressdialog {
 
         // Save the File URI
         mFileUri = fileUri;
+        Log.d("app","uri"+mFileUri.toString());
 
         // Clear the last download, if any
         mDownloadUrl = null;
         // Start MyUploadService to upload the file, so that the file is uploaded
         // even if this Activity is killed or put in the background
+
+//        Log.d("app", "uploadFromUri: pdf" +pdfkey);
+
         startService(new Intent(this, MyUploadService.class)
                 .putExtra(MyUploadService.EXTRA_FILE_URI, fileUri)
                 .putExtra("description", description.getText().toString().trim())
-                .putExtra("uid", FirebaseAuth.getInstance().getCurrentUser().getUid())
+                /*.putExtra("uid", FirebaseAuth.getInstance().getCurrentUser().getUid())*/
                /* .putExtra("username",username)*/
                 .putExtra("pdfkey", pdfkey)
                 .putExtra("pdfname", pdfname)
@@ -210,13 +216,13 @@ public class UploadPdfActivity extends Progressdialog {
             pdfName.setError("Please specify name of pdf");
             valid = false;
         }
-        else if(!(selectPdf.getText().toString().trim().contains(".pdf") || selectPdf.getText().toString().trim().contains(".doc"))){
+       /* else if(!(selectPdf.getText().toString().trim().contains(".pdf") || selectPdf.getText().toString().trim().contains(".doc"))){
             Toast toast = Toast.makeText(this,"Only Pdf and Doc format Supported",Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER,0,0);
             toast.show();
 
             valid = false;
-        }
+        }*/
         else{
             description.setError(null);
             selectPdf.setError(null);

@@ -23,6 +23,7 @@ import com.birjot.gndec_sports_admin.Activities.AddNews;
 import com.birjot.gndec_sports_admin.Fragments.Extramural;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
+import com.birjot.gndec_sports_admin.Fragments.PdfListFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
 import com.birjot.gndec_sports_admin.Fragments.extraposts;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
