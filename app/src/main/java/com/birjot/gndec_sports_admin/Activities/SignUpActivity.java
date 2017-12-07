@@ -47,6 +47,12 @@ public class SignUpActivity extends Progressdialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
         setContentView(R.layout.activity_sign_up);
 
 
@@ -71,6 +77,11 @@ public class SignUpActivity extends Progressdialog {
                 // ...
             }
         };*/
+    }
+
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 
 

@@ -10,6 +10,16 @@ public class chess extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
         setContentView(R.layout.activity_chess);
+    }
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 }

@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.birjot.gndec_sports_admin.Fragments.PdfListFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.lookformeetnews;
@@ -60,7 +61,7 @@ public class Athletics extends AppCompatActivity  {
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
-                if (currentPage == 4-1) {
+                if (currentPage == 10-1) {
                     currentPage = 0;
                 }
                 viewPager.setCurrentItem(currentPage++, true);
@@ -111,6 +112,8 @@ public class Athletics extends AppCompatActivity  {
 
 
     }
+
+
     public boolean onSupportNavigateUp(){
         onBackPressed();
         return true;
@@ -135,10 +138,9 @@ public class Athletics extends AppCompatActivity  {
         }}
 
     private void submitPost2() {
-        Toast.makeText(this, "working1", Toast.LENGTH_SHORT).show();
 
         Fragment fragment = null;
-        fragment = new intro1();
+        fragment = new PdfListFragment();
 
 
         if (fragment != null) {

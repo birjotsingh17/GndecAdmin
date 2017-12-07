@@ -23,6 +23,7 @@ import com.birjot.gndec_sports_admin.Activities.AddNews;
 import com.birjot.gndec_sports_admin.Fragments.Extramural;
 import com.birjot.gndec_sports_admin.Fragments.Games;
 import com.birjot.gndec_sports_admin.Fragments.GraphFragment;
+import com.birjot.gndec_sports_admin.Fragments.PdfListFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
 import com.birjot.gndec_sports_admin.Fragments.extraposts;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
@@ -137,13 +138,46 @@ public class HomeActivity extends Progressdialog
             return true;
         }
 
-        displaySelectedScreensecond(item.getItemId());
+        //displaySelectedScreensecond(item.getItemId());
         return super.onOptionsItemSelected(item);
     }
 
 
+    public void addmeetnews(View view){
+        Intent intent2 = new Intent(HomeActivity.this, AddMeetNews.class);
+        startActivity(intent2);
+    }
 
-    private void displaySelectedScreensecond(int itemId) {
+    public void addnews(View view){
+        Intent intent = new Intent(HomeActivity.this, AddNews.class);
+        startActivity(intent);
+    }
+
+    public void addintra(View view){
+        Intent intent = new Intent(HomeActivity.this, AddIntra.class);
+        startActivity(intent);
+}
+
+    public void addextra(View view){
+        Intent intent = new Intent(HomeActivity.this, AddExtra.class);
+        startActivity(intent);
+
+       /* Fragment fragment = null;
+        fragment = new Extramural();
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }*/}
+
+    public void addresult(View view){
+
+        Intent intent3 = new Intent(HomeActivity.this, UploadPdfActivity.class);
+        startActivity(intent3);
+        }
+
+
+  /*  private void displaySelectedScreensecond(int itemId) {
 
         //https://www.simplifiedcoding.net/android-navigation-drawer-example-using-fragments/
         //creating fragment object
@@ -165,9 +199,13 @@ public class HomeActivity extends Progressdialog
                 Intent intent2 = new Intent(HomeActivity.this, AddMeetNews.class);
                 startActivity(intent2);
                 break;
-          /*  case R.id.nav_menu3:
+            case R.id.addmeetresults:
+                Intent intent3 = new Intent(HomeActivity.this, UploadPdfActivity.class);
+                startActivity(intent3);
+                break;
+          *//*  case R.id.nav_menu3:
                 fragment = new Menu3();
-                break;*/
+                break;*//*
         }
 
         //replacing the fragment
@@ -177,7 +215,7 @@ public class HomeActivity extends Progressdialog
             ft.commit();
         }
 
-    }
+    }*/
 
 
 
@@ -277,7 +315,6 @@ public class HomeActivity extends Progressdialog
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
                 startActivity(intent);*/
                 break;
-
 
         }
 

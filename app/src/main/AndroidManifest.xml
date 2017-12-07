@@ -4,11 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/photo6104773795236653005"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -26,14 +30,6 @@
             android:name=".Activities.Graphs"
             android:label="@string/title_activity_graphs"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Games_Activities.BasketBall"
-            android:label="@string/title_activity_basket_ball"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Games_Activities.FootBall"
-            android:label="@string/title_activity_foot_ball"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.Developers" />
         <activity android:name=".Activities.AddNews" />
         <activity
@@ -45,6 +41,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".Services.MyUploadService" />
+        <service android:name=".Services.MyBaseTaskService" />
+
         <activity android:name=".Activities.Athletics" />
         <activity android:name=".Activities.AddMeetNews" />
         <activity android:name=".Activities.ContactUs" />
@@ -54,7 +54,20 @@
         <activity android:name=".Games_Activities.chess" />
         <activity android:name=".Games_Activities.volleyball" />
         <activity android:name=".Games_Activities.cricket" />
-        <activity android:name=".Games_Activities.billiards"></activity>
+        <activity android:name=".Games_Activities.billiards" />
+        <activity android:name=".Games_Activities.Hockey" />
+        <activity android:name=".Activities.AddAthResult" />
+        <activity android:name=".Activities.UploadPdfActivity" />
+        <activity android:name=".Games_Activities.Handball" />
+        <activity android:name=".Games_Activities.Cycling" />
+        <activity android:name=".Games_Activities.Badminton" />
+        <activity android:name=".Games_Activities.Kabadi" />
+        <activity android:name=".Games_Activities.Shooting" />
+        <activity android:name=".Games_Activities.Football" />
+        <activity android:name=".Games_Activities.BasketBall" />
+        <activity android:name=".Activities.SlideUpActivity" />
+        <activity android:name=".Activities.AddIntra" />
+        <activity android:name=".Activities.AddExtra"></activity>
     </application>
 
 </manifest>

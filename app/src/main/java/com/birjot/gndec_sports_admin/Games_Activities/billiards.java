@@ -10,6 +10,16 @@ public class billiards extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
         setContentView(R.layout.activity_billiards);
+    }
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 }

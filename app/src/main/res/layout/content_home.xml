@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="bottom"
+    app:umanoPanelHeight="20dp"
+    app:umanoShadowHeight="0dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.birjot.gndec_sports_admin.Activities.HomeActivity"
     tools:showIn="@layout/app_bar_home">
@@ -13,10 +17,73 @@
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
+        android:layout_centerInParent="true"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="0dp">
 
     </FrameLayout>
 
+    <LinearLayout
 
-</android.support.constraint.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/slidde"/>
+
+        <Button
+            android:paddingTop="30dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add News"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addnews"
+            />
+
+        <Button
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Meet News"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addmeetnews"
+            />
+
+        <Button
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Intramural"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addintra"
+            />
+        <Button
+            android:padding="15dp"
+            android:paddingBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Extramural"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addextra"
+            />
+        <Button
+            android:paddingTop="15dp"
+            android:paddingBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Meet Results"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addresult"
+            />
+
+    </LinearLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
