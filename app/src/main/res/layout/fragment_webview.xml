@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.birjot.gndec_sports_admin.Fragments.webview">
+
+   <me.grantland.widget.AutofitTextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/introSports"
+       android:padding="16dp"
+       android:id="@+id/webviewintro"></me.grantland.widget.AutofitTextView>
+
+</FrameLayout>

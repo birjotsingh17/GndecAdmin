@@ -67,7 +67,10 @@
         <activity android:name=".Games_Activities.BasketBall" />
         <activity android:name=".Activities.SlideUpActivity" />
         <activity android:name=".Activities.AddIntra" />
-        <activity android:name=".Activities.AddExtra"></activity>
+        <activity android:name=".Activities.AddExtra" />
+        <activity android:name=".Activities.AddPtuStar" />
+        <activity android:name=".Activities.AddBestAth" />
+        <activity android:name=".Activities.AddInterversity"></activity>
     </application>
 
 </manifest>

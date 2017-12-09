@@ -54,9 +54,15 @@ public class AddIntra extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
         setContentView(R.layout.activity_add_intra);
 
-        setTitle("INTRODUCTION");
+        setTitle("Add Intramural");
 
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
@@ -71,6 +77,11 @@ public class AddIntra extends AppCompatActivity implements View.OnClickListener 
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
         textViewShow.setOnClickListener(this);
+    }
+
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 
     @Override

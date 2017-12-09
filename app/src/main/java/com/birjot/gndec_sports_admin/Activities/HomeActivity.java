@@ -29,7 +29,10 @@ import com.birjot.gndec_sports_admin.Fragments.extraposts;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.introduction;
 import com.birjot.gndec_sports_admin.Fragments.lookforLastestnews;
+import com.birjot.gndec_sports_admin.Fragments.lookforbestathlete;
+import com.birjot.gndec_sports_admin.Fragments.lookforinterversity;
 import com.birjot.gndec_sports_admin.Fragments.lookformeetnews;
+import com.birjot.gndec_sports_admin.Fragments.lookforptustars;
 import com.birjot.gndec_sports_admin.Fragments.posts;
 import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -153,6 +156,14 @@ public class HomeActivity extends Progressdialog
         startActivity(intent);
     }
 
+    public void addptu(View view){
+        Intent intent = new Intent(HomeActivity.this, AddPtuStar.class);
+        startActivity(intent);
+    }
+    public void addbest(View view){
+        Intent intent = new Intent(HomeActivity.this, AddBestAth.class);
+        startActivity(intent);
+    }
     public void addintra(View view){
         Intent intent = new Intent(HomeActivity.this, AddIntra.class);
         startActivity(intent);
@@ -160,8 +171,11 @@ public class HomeActivity extends Progressdialog
 
     public void addextra(View view){
         Intent intent = new Intent(HomeActivity.this, AddExtra.class);
-        startActivity(intent);
+        startActivity(intent);}
 
+    public void addinterversity(View view){
+        Intent intent = new Intent(HomeActivity.this, AddInterversity.class);
+        startActivity(intent);
        /* Fragment fragment = null;
         fragment = new Extramural();
         if (fragment != null) {
@@ -309,6 +323,12 @@ public class HomeActivity extends Progressdialog
             case R.id.nav_athletics:
                 Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
                 startActivity(intent5);
+                break;
+            case R.id.ptustars:
+                fragment = new lookforptustars();
+                break;
+            case R.id.interversity:
+                fragment = new lookforinterversity();
                 break;
             case R.id.nav_graph:
                 fragment = new GraphFragment();

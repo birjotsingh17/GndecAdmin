@@ -30,7 +30,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
-public class AddExtra extends AppCompatActivity implements View.OnClickListener{
+public class AddPtuStar extends AppCompatActivity implements View.OnClickListener  {
 
 
     private static final int PICK_IMAGE_REQUEST = 234;
@@ -51,7 +51,6 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
     private DatabaseReference mDatabase;
     String uploadId;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,23 +60,23 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
 
         }
 
-        setContentView(R.layout.activity_add_extra);
+        setContentView(R.layout.activity_add_ptu_star);
 
-        setTitle("Add Extramural");
+        setTitle("Add Intramural");
+
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
-        buttonUpload = (Button)findViewById(R.id.buttonUpload);
+        buttonUpload = (Button) findViewById(R.id.buttonUpload);
         imageView = (ImageView) findViewById(R.id.imageView);
         editTextName = (EditText) findViewById(R.id.editText);
         textViewShow = (TextView) findViewById(R.id.textViewShow);
 
         storageReference = FirebaseStorage.getInstance().getReference();
-        mDatabase = FirebaseDatabase.getInstance().getReference("extramural");
+        mDatabase = FirebaseDatabase.getInstance().getReference("ptustars");
 
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
         textViewShow.setOnClickListener(this);
-
     }
 
     public boolean onSupportNavigateUp(){
@@ -95,9 +94,7 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
         } else if (view == textViewShow) {
 
         }
-
     }
-
     private void showFileChooser() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -106,16 +103,15 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
     }
 
 
-
-    public String getFileName(String uri){
+    public String getFileName(String uri) {
         int index;
-        while(uri.contains(":")){
+        while (uri.contains(":")) {
             index = uri.indexOf(":");
-            uri = uri.substring(index+1);
+            uri = uri.substring(index + 1);
         }
-        while (uri.contains("/")){
+        while (uri.contains("/")) {
             index = uri.indexOf("/");
-            uri = uri.substring(index+1);
+            uri = uri.substring(index + 1);
         }
         return uri;
     }
@@ -211,3 +207,4 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
         }
     }
 }
+

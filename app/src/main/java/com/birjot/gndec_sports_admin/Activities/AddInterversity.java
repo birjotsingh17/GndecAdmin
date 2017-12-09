@@ -30,7 +30,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
-public class AddExtra extends AppCompatActivity implements View.OnClickListener{
+public class AddInterversity extends AppCompatActivity implements View.OnClickListener  {
 
 
     private static final int PICK_IMAGE_REQUEST = 234;
@@ -51,7 +51,6 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
     private DatabaseReference mDatabase;
     String uploadId;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +60,7 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
 
         }
 
-        setContentView(R.layout.activity_add_extra);
-
+        setContentView(R.layout.activity_add_interversity);
         setTitle("Add Extramural");
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
@@ -72,12 +70,11 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
         textViewShow = (TextView) findViewById(R.id.textViewShow);
 
         storageReference = FirebaseStorage.getInstance().getReference();
-        mDatabase = FirebaseDatabase.getInstance().getReference("extramural");
+        mDatabase = FirebaseDatabase.getInstance().getReference("interversity");
 
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
         textViewShow.setOnClickListener(this);
-
     }
 
     public boolean onSupportNavigateUp(){
@@ -95,7 +92,6 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
         } else if (view == textViewShow) {
 
         }
-
     }
 
     private void showFileChooser() {
@@ -209,5 +205,4 @@ public class AddExtra extends AppCompatActivity implements View.OnClickListener{
         } else {
             //display an error if no file is selected
         }
-    }
-}
+}}

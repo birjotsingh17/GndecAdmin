@@ -33,13 +33,13 @@
         <ImageView
 
             android:layout_gravity="center"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:src="@drawable/slidde"/>
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/adminslide"/>
 
         <Button
-            android:paddingTop="30dp"
-            android:paddingBottom="15dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add News"
@@ -48,16 +48,31 @@
             />
 
         <Button
-            android:padding="15dp"
+            android:padding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Meet News"
             android:theme="@style/ButtonStyle"
             android:onClick="addmeetnews"
             />
-
         <Button
-            android:padding="15dp"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add PTU Stars"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addptu"
+            />
+        <Button
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Best Athletes"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addbest"
+            />
+        <Button
+            android:padding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Intramural"
@@ -65,8 +80,7 @@
             android:onClick="addintra"
             />
         <Button
-            android:padding="15dp"
-            android:paddingBottom="30dp"
+            android:padding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Extramural"
@@ -74,14 +88,23 @@
             android:onClick="addextra"
             />
         <Button
-            android:paddingTop="15dp"
-            android:paddingBottom="40dp"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Intervarsity"
+            android:theme="@style/ButtonStyle"
+            android:onClick="addinterversity"
+            />
+        <Button
+            android:paddingTop="12dp"
+            android:paddingBottom="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Meet Results"
             android:theme="@style/ButtonStyle"
             android:onClick="addresult"
             />
+
 
     </LinearLayout>
 

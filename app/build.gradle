@@ -50,8 +50,16 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.jjoe64:graphview:4.2.1'
     compile 'com.sothree.slidinguppanel:library:3.3.1'
+    compile 'me.grantland:autofittextview:0.2.+'
     testCompile 'junit:junit:4.12'
 }
+
+
+
+
+
+
+
 
 
 
