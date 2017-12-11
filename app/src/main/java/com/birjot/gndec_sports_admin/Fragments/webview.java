@@ -25,8 +25,10 @@ public class webview extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View v=inflater.inflate(R.layout.fragment_webview, container, false);
 
-      /*  WebView webView = (WebView) getActivity().findViewById(R.id.webviewintro);
+
+       WebView webView = (WebView) v.findViewById(R.id.webviewintro);
 
         String text = "   The Sports Department was established in 1956"+
                 "with the aim to inculcate sports culture among staff"+
@@ -66,9 +68,9 @@ public class webview extends Fragment {
                 "teamwork, leadership development as well as"+
                 "lifelong pattern of positive activity.";
 
-        webView.loadData("<p style=\"text-align:justify\">"+ text + "</p>", "text/html" , "UTF-8");*/
+        webView.loadData("<p style=\"text-align:justify\">"+ text + "</p>", "text/html" , "UTF-8");
 
-        return inflater.inflate(R.layout.fragment_webview, container, false);
+        return v;
     }
 
 }

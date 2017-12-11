@@ -56,10 +56,11 @@
                 android:text="LAWN TENNIS" />
 
 
-
         </LinearLayout>
 
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -83,7 +84,17 @@
         android:text="LAWN TENNIS COURT"
         android:gravity="center"/>
 
-    <LinearLayout
+
+        <WebView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:id="@+id/lawnweb"
+            android:layout_height="wrap_content">
+
+        </WebView>
+
+
+        <!--<LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,7 +139,7 @@
         </LinearLayout>
 
     </LinearLayout>
-
+-->
 
 </LinearLayout>
 

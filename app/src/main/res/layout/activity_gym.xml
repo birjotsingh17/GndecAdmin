@@ -72,7 +72,7 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/gym3"/>
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gym"
@@ -87,12 +87,25 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:padding="5dp"/>
-
+-->
 
     </LinearLayout>
 
 
+    <WebView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:id="@+id/gymweb"
+        android:layout_height="wrap_content">
 
+    </WebView>
+    <WebView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:id="@+id/gyweb"
+        android:layout_height="wrap_content">
+
+    </WebView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -105,16 +118,23 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/gym2"/>
 
-        <TextView
+       <!-- <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gym3"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:padding="5dp"/>
-    </LinearLayout>
+ -->   </LinearLayout>
 
+    <WebView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:id="@+id/gweb"
+        android:layout_height="wrap_content">
 
+    </WebView>
+<!--
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -159,7 +179,7 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
 </LinearLayout>
 
 </ScrollView>

@@ -92,8 +92,9 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
                         break;
                     case 1:
-                        Intent intent1 = new Intent(context, volleyball.class);
-                        context.startActivity(intent1);
+
+                        Intent intent14 = new Intent(context, Shooting.class);
+                        context.startActivity(intent14);
 
                         break;
 
@@ -169,9 +170,9 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
                         break;
 
                     case 14:
-                        Intent intent14 = new Intent(context, Shooting.class);
-                        context.startActivity(intent14);
 
+                        Intent intent1 = new Intent(context, volleyball.class);
+                        context.startActivity(intent1);
                         break;
                 }
 
