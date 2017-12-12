@@ -38,6 +38,8 @@ public class AddNews extends Progressdialog {
 
         }
 
+        setTitle("GNDECsports");
+
         setContentView(R.layout.activity_add_news);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();

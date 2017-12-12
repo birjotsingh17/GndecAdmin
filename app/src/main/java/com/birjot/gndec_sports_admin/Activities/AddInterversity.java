@@ -61,7 +61,7 @@ public class AddInterversity extends AppCompatActivity implements View.OnClickLi
         }
 
         setContentView(R.layout.activity_add_interversity);
-        setTitle("Add Extramural");
+        setTitle("Add Intervarsity");
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
         buttonUpload = (Button)findViewById(R.id.buttonUpload);

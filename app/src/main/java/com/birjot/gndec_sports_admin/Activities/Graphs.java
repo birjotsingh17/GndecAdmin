@@ -32,6 +32,8 @@ public class Graphs extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        setTitle("Analysis");
+
 
 
         GraphView graph = (GraphView) findViewById(R.id.graph);

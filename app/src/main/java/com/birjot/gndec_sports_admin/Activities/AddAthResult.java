@@ -42,6 +42,8 @@ public class AddAthResult extends Progressdialog {
 
         }
 
+        setTitle("GNDECsports");
+
         setContentView(R.layout.activity_add_ath_result);
 
 

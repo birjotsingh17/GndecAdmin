@@ -62,7 +62,7 @@ public class AddBestAth extends AppCompatActivity implements View.OnClickListene
 
         setContentView(R.layout.activity_add_best_ath);
 
-        setTitle("Add Extramural");
+        setTitle("Add Best Athletes");
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
         buttonUpload = (Button)findViewById(R.id.buttonUpload);

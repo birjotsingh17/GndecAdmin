@@ -16,6 +16,8 @@ public class Developers extends AppCompatActivity {
 
         }
 
+        setTitle("GNDECsports");
+
         setContentView(R.layout.activity_developers);
     }
 

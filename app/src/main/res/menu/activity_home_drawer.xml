@@ -83,6 +83,11 @@
                 android:icon="@drawable/developers"
                 android:title="Developers"
                 />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logoutt"
+                android:title="Logout"
+                />
 
         </menu>
     </item>
