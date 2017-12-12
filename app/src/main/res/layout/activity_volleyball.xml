@@ -50,7 +50,7 @@
                 android:textSize="20dp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical"
-                android:text="VOLLEY BALL COURT" />
+                android:text="VOLLEY BALL" />
 
 
 
@@ -77,10 +77,10 @@
         android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HOCKEY GROUND"
+        android:text="VOLLEY BALL COURT"
         android:gravity="center"/>
 
-    <LinearLayout
+    <!--<LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
         </LinearLayout>
 
     </LinearLayout>
-
+-->
     </LinearLayout>
 
 </ScrollView>

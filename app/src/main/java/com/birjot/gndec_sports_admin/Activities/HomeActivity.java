@@ -53,8 +53,9 @@ public class HomeActivity extends Progressdialog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //toolbar.setTitle("Menu 1");
         setSupportActionBar(toolbar);
+
+        setTitle("GNDECsports");
 
         displaySelectedScreen(R.id.introduction);
 /*
@@ -113,14 +114,14 @@ public class HomeActivity extends Progressdialog
 
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
-    }
+    }*/
 
-    @Override
+ /*   @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -128,11 +129,11 @@ public class HomeActivity extends Progressdialog
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-       /* if (id == R.id.action_settings) {
+       *//* if (id == R.id.action_settings) {
             return true;
         }
 
-        else*/ if (id == R.id.action_logout) {
+        else*//* if (id == R.id.action_logout) {
 
 
             showProgressDialog();
@@ -143,7 +144,7 @@ public class HomeActivity extends Progressdialog
 
         //displaySelectedScreensecond(item.getItemId());
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 
     public void addmeetnews(View view){
@@ -335,6 +336,12 @@ public class HomeActivity extends Progressdialog
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
                 startActivity(intent);*/
                 break;
+            case R.id.nav_logout:
+                showProgressDialog();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+            break;
+
 
         }
 

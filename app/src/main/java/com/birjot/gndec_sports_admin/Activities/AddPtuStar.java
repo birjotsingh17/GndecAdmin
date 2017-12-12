@@ -62,7 +62,7 @@ public class AddPtuStar extends AppCompatActivity implements View.OnClickListene
 
         setContentView(R.layout.activity_add_ptu_star);
 
-        setTitle("Add Intramural");
+        setTitle("Add PTU Stars");
 
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
