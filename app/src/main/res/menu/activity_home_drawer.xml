@@ -7,9 +7,9 @@
             android:icon="@drawable/infoicon"
             android:title="Introduction" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_commitee"
             android:icon="@drawable/commiteicon"
-            android:title="Commite" />
+            android:title="Commitee" />
         <item
             android:id="@+id/latestnews"
             android:icon="@drawable/libnewsicon"

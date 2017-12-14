@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GNDEC_sports_admin.iml" filepath="$PROJECT_DIR$/GNDEC_sports_admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GndecAdmin.iml" filepath="$PROJECT_DIR$/GndecAdmin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
