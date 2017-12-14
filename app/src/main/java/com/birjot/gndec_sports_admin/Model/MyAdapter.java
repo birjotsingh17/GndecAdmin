@@ -126,9 +126,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
                 mDatabase = FirebaseDatabase.getInstance().getReference();
                 DatabaseReference globalRef = mDatabase.child("uploads").child(upload.getKey());
+
+                DatabaseReference globalRef1 = mDatabase.child("extramural").child(upload.getKey());
+
+                DatabaseReference globalRef2 = mDatabase.child("ptustars").child(upload.getKey());
+
+                DatabaseReference globalRef3 = mDatabase.child("bestath").child(upload.getKey());
+
+                DatabaseReference globalRef4 = mDatabase.child("interversity").child(upload.getKey());
+
                 Log.d("app", "onSuccess: "+globalRef.toString());
                 //DatabaseReference userPdfRef = mDatabase.child(getString(R.string.DB_user_pdfs)).child(pdf.getUid()).child(upload.getKey());
                 deleteOnFirebaseDB(globalRef);
+                deleteOnFirebaseDB(globalRef1);
+                deleteOnFirebaseDB(globalRef2);
+                deleteOnFirebaseDB(globalRef3);
+                deleteOnFirebaseDB(globalRef4);
                // deletePdfOnFirebaseDB(userPdfRef);
 
 

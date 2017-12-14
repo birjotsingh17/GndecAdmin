@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.birjot.gndec_sports_admin.Fragments.PdfListFragment;
 import com.birjot.gndec_sports_admin.Fragments.Records;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
+import com.birjot.gndec_sports_admin.Fragments.lookforbestathlete;
 import com.birjot.gndec_sports_admin.Fragments.lookformeetnews;
 import com.birjot.gndec_sports_admin.Model.ViewPagerAdapter;
 import com.birjot.gndec_sports_admin.R;
@@ -28,7 +29,7 @@ public class Athletics extends AppCompatActivity  {
 
     ViewPager viewPager;
 
-    private Button newsath, resultsath, recordsath;
+    private Button newsath, resultsath, recordsath,stars;
 
     int currentPage = 0;
     Timer timer;
@@ -43,7 +44,7 @@ public class Athletics extends AppCompatActivity  {
 
         submitPost3();
 
-        setTitle("ATHLETIC MEET");
+        setTitle("Athletic Meet");
 
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -81,6 +82,16 @@ public class Athletics extends AppCompatActivity  {
         newsath=(Button) findViewById(R.id.newsath);
         recordsath=(Button) findViewById(R.id.recordsath);
         resultsath=(Button) findViewById(R.id.resultsath);
+
+        stars=(Button) findViewById(R.id.stars);
+
+        stars.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                submitPost4();
+            }
+        });
 
         recordsath.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +145,18 @@ public class Athletics extends AppCompatActivity  {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.frameath, fragment);
                 ft.commit();
+
+        }}
+
+    private void submitPost4(){
+        Fragment fragment = null;
+        fragment = new lookforbestathlete();
+
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frameath, fragment);
+            ft.commit();
 
         }}
 

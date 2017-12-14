@@ -42,27 +42,29 @@ public class Games extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.Recycle);
 
+
         GamesModel u1 = new GamesModel(R.drawable.gymm,"GYM");
-        GamesModel u2 = new GamesModel(R.drawable.volleyball,"VOLLEYBALL");
+        GamesModel u15 = new GamesModel(R.drawable.trrackk,"TRACK & FIELD");
         GamesModel u3 = new GamesModel(R.drawable.hockeylogooo,"HOCKEY");
         GamesModel u4 = new GamesModel(R.drawable.lawntennis,"LAWNTENNIS");
         GamesModel u5 = new GamesModel(R.drawable.billiardsb,"BILLIARDS");
         GamesModel u6 = new GamesModel(R.drawable.football,"FOOTBALL");
-
         GamesModel u7 = new GamesModel(R.drawable.basket,"BASKETBALL");
         GamesModel u8 = new GamesModel(R.drawable.batball,"CRICKET");
-        GamesModel u9 = new GamesModel(R.drawable.swiming,"SWIMING");
+        GamesModel u9 = new GamesModel(R.drawable.swiming,"SWIMMING");
         GamesModel u10 = new GamesModel(R.drawable.chess,"CHESS");
         GamesModel u11 = new GamesModel(R.drawable.handball,"HANDBALL");
         GamesModel u12 = new GamesModel(R.drawable.cycling,"CYCLING");
         GamesModel u13 = new GamesModel(R.drawable.badminton,"BADMINTON");
         GamesModel u14 = new GamesModel(R.drawable.kabbaddi,"KABADDI");
-        GamesModel u15 = new GamesModel(R.drawable.shooting,"SHOOTING");
+        GamesModel u2 = new GamesModel(R.drawable.volleyball,"VOLLEYBALL");
 
 
         userlist = new ArrayList<GamesModel>();
+
+
         userlist.add(u1);
-        userlist.add(u2);
+        userlist.add(u15);
         userlist.add(u3);
         userlist.add(u4);
         userlist.add(u5);
@@ -75,7 +77,7 @@ public class Games extends Fragment {
         userlist.add(u12);
         userlist.add(u13);
         userlist.add(u14);
-        userlist.add(u15);
+        userlist.add(u2);
 
 
         adapter1= new GamesAdapter(getActivity(),R.layout.gamedesign,userlist);

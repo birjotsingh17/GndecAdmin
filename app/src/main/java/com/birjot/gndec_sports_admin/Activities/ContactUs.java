@@ -17,6 +17,9 @@ public class ContactUs extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         }
+
+
+        setTitle("GNDECsports");
         setContentView(R.layout.activity_contact_us);
     }
     public boolean onSupportNavigateUp(){

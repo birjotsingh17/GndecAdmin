@@ -52,6 +52,8 @@ public class UploadPdfActivity extends Progressdialog {
             setContentView(R.layout.activity_upload_pdf);
         }
 
+        setTitle("GNDECsports");
+
         initViews();
         //getusername();
         restoreInstanceState(savedInstanceState);

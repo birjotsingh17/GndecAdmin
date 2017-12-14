@@ -37,6 +37,9 @@ public class AddMeetNews extends AppCompatActivity {
 
         }
 
+
+        setTitle("GNDECsports");
+
         setContentView(R.layout.activity_add_meet_news);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();

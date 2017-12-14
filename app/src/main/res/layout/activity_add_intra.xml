@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
-    tools:context="com.birjot.gndec_sports_admin.Activities.AddIntra">
+    tools:context="com.birjot.gndec_sports_admin.Activities.AddBestAth">
+
 
     <android.support.constraint.ConstraintLayout
 
@@ -58,8 +58,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="376dp"
-            android:layout_height="351dp"
+            android:layout_width="350dp"
+            android:layout_height="373dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/linearLayout"
@@ -67,8 +67,10 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginLeft="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            android:layout_marginStart="8dp" />
+            app:layout_constraintHorizontal_bias="0.17"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="33dp"
+            tools:layout_editor_absoluteY="81dp" />
 
         <!--<LinearLayout
             android:layout_width="match_parent"
@@ -111,5 +113,5 @@
 
     </android.support.constraint.ConstraintLayout>
 
-</ScrollView>
 
+</ScrollView>

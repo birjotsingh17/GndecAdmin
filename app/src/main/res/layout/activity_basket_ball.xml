@@ -67,12 +67,16 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/basket1"/>
 
-
-
-
         </LinearLayout>
 
 
+        <WebView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:id="@+id/basketweb"
+            android:layout_height="wrap_content">
+
+        </WebView>
 
 
         <LinearLayout
@@ -92,7 +96,7 @@
         </LinearLayout>
 
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +110,7 @@
                 android:id="@+id/DP1"
                 android:layout_width="84dp"
                 android:layout_height="84dp"
-                android:src="@drawable/harjinder"
+                android:src="@drawable/cbasket"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp" />
 
@@ -124,7 +128,7 @@
                     android:textSize="20dp"
                     android:textColor="@color/black"
                     android:gravity="center_vertical"
-                    android:text="Anmol Singh Rattan" />
+                    android:text="Sameath Singh" />
 
                 <TextView
                     android:id="@+id/textViewEmail1"
@@ -132,11 +136,11 @@
                     android:layout_height="40dp"
                     android:textSize="16dp"
                     android:gravity="center_vertical"
-                    android:text="Captain College Hockey Team" />
+                    android:text="Captain College Basketball Team" />
 
             </LinearLayout>
 
-        </LinearLayout>
+        </LinearLayout>-->
     </LinearLayout>
 
 </ScrollView>

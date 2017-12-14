@@ -18,6 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="EXISTING RECORD (BOYS)"
+
+            android:background="@drawable/border"
             android:textStyle="bold"
             android:textSize="20dp"
             android:textColor="@color/colorheadig"
@@ -45,6 +47,7 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/border"
             android:text="EXISTING RECORD (GIRLS)"
             android:textSize="20dp"
             android:textColor="@color/colorheadig"

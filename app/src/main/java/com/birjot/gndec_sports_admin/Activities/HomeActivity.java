@@ -29,7 +29,10 @@ import com.birjot.gndec_sports_admin.Fragments.extraposts;
 import com.birjot.gndec_sports_admin.Fragments.intro1;
 import com.birjot.gndec_sports_admin.Fragments.introduction;
 import com.birjot.gndec_sports_admin.Fragments.lookforLastestnews;
+import com.birjot.gndec_sports_admin.Fragments.lookforbestathlete;
+import com.birjot.gndec_sports_admin.Fragments.lookforinterversity;
 import com.birjot.gndec_sports_admin.Fragments.lookformeetnews;
+import com.birjot.gndec_sports_admin.Fragments.lookforptustars;
 import com.birjot.gndec_sports_admin.Fragments.posts;
 import com.birjot.gndec_sports_admin.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,8 +53,9 @@ public class HomeActivity extends Progressdialog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //toolbar.setTitle("Menu 1");
         setSupportActionBar(toolbar);
+
+        setTitle("GNDECsports");
 
         displaySelectedScreen(R.id.introduction);
 /*
@@ -110,14 +114,14 @@ public class HomeActivity extends Progressdialog
 
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
-    }
+    }*/
 
-    @Override
+ /*   @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -125,11 +129,11 @@ public class HomeActivity extends Progressdialog
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-       /* if (id == R.id.action_settings) {
+       *//* if (id == R.id.action_settings) {
             return true;
         }
 
-        else*/ if (id == R.id.action_logout) {
+        else*//* if (id == R.id.action_logout) {
 
 
             showProgressDialog();
@@ -140,7 +144,7 @@ public class HomeActivity extends Progressdialog
 
         //displaySelectedScreensecond(item.getItemId());
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 
     public void addmeetnews(View view){
@@ -153,6 +157,14 @@ public class HomeActivity extends Progressdialog
         startActivity(intent);
     }
 
+    public void addptu(View view){
+        Intent intent = new Intent(HomeActivity.this, AddPtuStar.class);
+        startActivity(intent);
+    }
+    public void addbest(View view){
+        Intent intent = new Intent(HomeActivity.this, AddBestAth.class);
+        startActivity(intent);
+    }
     public void addintra(View view){
         Intent intent = new Intent(HomeActivity.this, AddIntra.class);
         startActivity(intent);
@@ -160,8 +172,11 @@ public class HomeActivity extends Progressdialog
 
     public void addextra(View view){
         Intent intent = new Intent(HomeActivity.this, AddExtra.class);
-        startActivity(intent);
+        startActivity(intent);}
 
+    public void addinterversity(View view){
+        Intent intent = new Intent(HomeActivity.this, AddInterversity.class);
+        startActivity(intent);
        /* Fragment fragment = null;
         fragment = new Extramural();
         if (fragment != null) {
@@ -310,6 +325,12 @@ public class HomeActivity extends Progressdialog
                 Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
                 startActivity(intent5);
                 break;
+            case R.id.ptustars:
+                fragment = new lookforptustars();
+                break;
+            case R.id.interversity:
+                fragment = new lookforinterversity();
+                break;
             case R.id.nav_graph:
                 fragment = new GraphFragment();
                 break;
@@ -319,10 +340,18 @@ public class HomeActivity extends Progressdialog
                 Intent  i  = new Intent (HomeActivity.this , commitee.class) ;
                 startActivity(i);
                 break;
+
             case R.id.nav_scholarships:
                 Intent i1 = new Intent(HomeActivity.this , scholarshiplist.class) ;
                 startActivity(i1);
                 break ;
+
+            case R.id.nav_logout:
+                showProgressDialog();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+            break;
+
 
         }
 

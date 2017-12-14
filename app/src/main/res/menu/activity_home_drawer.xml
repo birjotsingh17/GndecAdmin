@@ -48,7 +48,14 @@
                 android:id="@+id/viewposts11"
                 android:icon="@drawable/achiicon"
                 android:title="Extramural" />
-
+            <item
+                android:id="@+id/interversity"
+                android:icon="@drawable/achiicon"
+                android:title="Interversity" />
+            <item
+                android:id="@+id/ptustars"
+                android:icon="@drawable/achiicon"
+                android:title="PTU Stars" />
 
         </menu>
     </item>
@@ -75,6 +82,11 @@
                 android:id="@+id/nav_madeby"
                 android:icon="@drawable/developers"
                 android:title="Developers"
+                />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logoutt"
+                android:title="Logout"
                 />
 
         </menu>

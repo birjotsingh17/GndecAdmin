@@ -8,6 +8,11 @@
 
     tools:context="com.birjot.gndec_sports_admin.Activities.ContactUs">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -182,14 +187,17 @@
         </LinearLayout>
 
     </LinearLayout>
+</LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/ButtonStyle"
         android:layout_marginTop="15dp"
-        android:text="gndecsports@gmail.com"
+        android:text="Mail Us"
         android:clickable="true"
+        android:padding="15dp"
+        android:textSize="20dp"
         android:onClick="openmail"/>
 
 </LinearLayout>
