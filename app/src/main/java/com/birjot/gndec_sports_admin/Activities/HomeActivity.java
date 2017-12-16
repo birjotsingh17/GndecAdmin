@@ -333,9 +333,19 @@ public class HomeActivity extends Progressdialog
                 break;
             case R.id.nav_graph:
                 fragment = new GraphFragment();
+                break;
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
                 startActivity(intent);*/
+            case R.id.nav_commitee:
+                Intent  i  = new Intent (HomeActivity.this , commitee.class) ;
+                startActivity(i);
                 break;
+
+            case R.id.nav_scholarships:
+                Intent i1 = new Intent(HomeActivity.this , scholarshiplist.class) ;
+                startActivity(i1);
+                break ;
+
             case R.id.nav_logout:
                 showProgressDialog();
                 FirebaseAuth.getInstance().signOut();

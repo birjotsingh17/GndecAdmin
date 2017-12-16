@@ -68,10 +68,15 @@
         <activity android:name=".Activities.SlideUpActivity" />
         <activity android:name=".Activities.AddIntra" />
         <activity android:name=".Activities.AddExtra" />
+
+        <activity android:name=".Activities.scholarshiplist" />
+        <activity android:name=".Activities.commitee"></activity>
+
         <activity android:name=".Activities.AddPtuStar" />
         <activity android:name=".Activities.AddBestAth" />
         <activity android:name=".Activities.AddInterversity" />
         <activity android:name=".Activities.Buttonachieve"></activity>
+
     </application>
 
 </manifest>
