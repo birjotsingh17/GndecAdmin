@@ -2,6 +2,7 @@ package com.birjot.gndec_sports_admin.Games_Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebView;
 
 import com.birjot.gndec_sports_admin.R;
 
@@ -16,7 +17,13 @@ public class chess extends AppCompatActivity {
 
         }
 
+
+
         setContentView(R.layout.activity_chess);
+
+        WebView web = (WebView) findViewById(R.id.chessweb);
+        String text =  " Regularly played by students in Sports  Complex. Both intramural and extramural activity is conducted from time to time.";
+        web.loadData("<p style=\" text-align: justify\">"+ text +"</p>", "text/html", "UTF-8");
     }
     public boolean onSupportNavigateUp(){
         onBackPressed();

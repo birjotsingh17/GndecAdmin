@@ -78,6 +78,13 @@
             android:layout_height="wrap_content">
 
         </WebView>
+        <WebView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:id="@+id/footweb2"
+            android:layout_height="wrap_content">
+
+        </WebView>
 
         <!--<LinearLayout
             android:orientation="horizontal"

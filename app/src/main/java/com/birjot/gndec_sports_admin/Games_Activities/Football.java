@@ -20,8 +20,14 @@ public class Football extends AppCompatActivity {
         setContentView(R.layout.activity_football);
 
         WebView web = (WebView) findViewById(R.id.footweb);
-        String text =   "Our Campus has two standard cemented courts (110m * 70m) with flood lights that serves athletic training, competition and leisure needs. ";
+
+        WebView webone = (WebView) findViewById(R.id.footweb2);
+
+        String text =   "One natural grass football field (Dimensions:110 yards by 70 yards). Intramural and Extramural are regularly conducted for boys.";
+         String textone =  "Rental charges: 1500/- per day";
+
         web.loadData("<p style=\" text-align: justify\">"+ text +"</p>", "text/html", "UTF-8");
+        webone.loadData("<p style=\" text-align: justify\">"+ textone +"</p>", "text/html", "UTF-8");
     }
 
     public boolean onSupportNavigateUp(){
