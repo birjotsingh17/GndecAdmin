@@ -19,7 +19,7 @@ public class ContactUs extends AppCompatActivity {
         }
 
 
-        setTitle("GNDECsports");
+        setTitle("Contact Us");
         setContentView(R.layout.activity_contact_us);
     }
     public boolean onSupportNavigateUp(){

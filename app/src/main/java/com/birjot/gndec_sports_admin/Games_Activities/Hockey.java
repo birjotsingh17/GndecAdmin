@@ -17,6 +17,8 @@ public class Hockey extends AppCompatActivity {
 
         }
 
+        setTitle("Facilities");
+
         setContentView(R.layout.activity_hockey);
 
         WebView web = (WebView) findViewById(R.id.webhoc1);

@@ -19,6 +19,8 @@ public class BasketBall extends AppCompatActivity {
 
         setContentView(R.layout.activity_basket_ball);
 
+        setTitle("Facilities");
+
         WebView web = (WebView) findViewById(R.id.basketweb);
 
         WebView web1 = (WebView) findViewById(R.id.basketweb2);

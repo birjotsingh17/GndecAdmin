@@ -17,6 +17,7 @@ public class Shooting extends AppCompatActivity {
 
         }
 
+        setTitle("Facilities");
         setContentView(R.layout.activity_shooting);
 
         WebView web = (WebView) findViewById(R.id.trackweb);

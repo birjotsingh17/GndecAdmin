@@ -54,7 +54,7 @@
                     android:layout_height="40dp"
                     android:textStyle="bold"
                     android:textSize="20dp"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:text="SPORTS DEPARTMENT" />
 
@@ -82,6 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VISION:"
+            android:layout_gravity="center"
             android:textSize="17dp"
             android:layout_marginTop="15dp"
             android:textStyle="bold"
@@ -101,6 +102,7 @@
             android:layout_height="wrap_content"
             android:text="MISSION:"
             android:textSize="17dp"
+            android:layout_gravity="center"
             android:textStyle="bold"
             android:layout_marginTop="15dp"
             android:textColor="@color/colorheadig"

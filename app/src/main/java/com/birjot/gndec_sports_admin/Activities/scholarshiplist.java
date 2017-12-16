@@ -28,6 +28,7 @@ public class scholarshiplist extends AppCompatActivity implements AdapterView.On
 
         }
 
+        setTitle("Scholarships");
         setContentView(R.layout.activity_scholarshiplist);
 
         listview = (ListView) findViewById(R.id.listView);

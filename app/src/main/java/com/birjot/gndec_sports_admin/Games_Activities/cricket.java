@@ -19,6 +19,8 @@ public class cricket extends AppCompatActivity {
 
         setContentView(R.layout.activity_cricket);
 
+        setTitle("Facilities");
+
         WebView web = (WebView) findViewById(R.id.webcric1);
         WebView webone = (WebView) findViewById(R.id.webcric2);
 

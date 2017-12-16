@@ -16,6 +16,7 @@ public class Football extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         }
+        setTitle("Facilities");
 
         setContentView(R.layout.activity_football);
 

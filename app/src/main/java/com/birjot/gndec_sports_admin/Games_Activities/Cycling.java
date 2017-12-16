@@ -19,6 +19,8 @@ public class Cycling extends AppCompatActivity {
 
         setContentView(R.layout.activity_cycling);
 
+        setTitle("Facilities");
+
         WebView web = (WebView) findViewById(R.id.cycleweb);
         String text =  " College provide Cycles and students practice at PAU Velodrome, Ludhiana. ";
         web.loadData("<p style=\" text-align: justify\">"+ text +"</p>", "text/html", "UTF-8");

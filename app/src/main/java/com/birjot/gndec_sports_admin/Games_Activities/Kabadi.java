@@ -18,6 +18,7 @@ public class Kabadi extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_kabadi);
+        setTitle("Facilities");
 
         WebView web = (WebView) findViewById(R.id.kabweb);
         String text =  " One ground for N/S Kabaddi is situated in the track and field stadium and is regularly used for technical and tactical training by college boys team. Intramural are very often conducted.";

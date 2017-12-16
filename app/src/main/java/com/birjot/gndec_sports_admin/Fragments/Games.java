@@ -64,7 +64,7 @@ public class Games extends Fragment {
         GamesModel u3 = new GamesModel(R.drawable.hockeyyyy,"HOCKEY");
         GamesModel u4 = new GamesModel(R.drawable.tennis,"LAWNTENNIS");
         GamesModel u5 = new GamesModel(R.drawable.billiard,"BILLIARDS");
-        GamesModel u6 = new GamesModel(R.drawable.fffootball,"FOOTBALL");
+        GamesModel u6 = new GamesModel(R.drawable.ffffootball,"FOOTBALL");
 
         GamesModel u7 = new GamesModel(R.drawable.basketball,"BASKETBALL");
         GamesModel u8 = new GamesModel(R.drawable.cccricket,"CRICKET");

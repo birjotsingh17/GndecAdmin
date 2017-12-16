@@ -18,6 +18,7 @@ public class volleyball extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_volleyball);
+        setTitle("Facilities");
 
         WebView web = (WebView) findViewById(R.id.webvolley1);
         WebView webone = (WebView) findViewById(R.id.webvolley2);

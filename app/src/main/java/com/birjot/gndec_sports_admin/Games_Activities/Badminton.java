@@ -17,6 +17,7 @@ public class Badminton extends AppCompatActivity {
 
         }
 
+        setTitle("Facilities");
         setContentView(R.layout.activity_badminton);
 
         WebView web = (WebView) findViewById(R.id.badweb);

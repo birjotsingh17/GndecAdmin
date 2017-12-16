@@ -19,6 +19,8 @@ public class gym extends AppCompatActivity {
 
         setContentView(R.layout.activity_gym);
 
+        setTitle("Facilities");
+
         WebView web = (WebView) findViewById(R.id.gymweb);
         WebView webone = (WebView) findViewById(R.id.gyweb);
 
