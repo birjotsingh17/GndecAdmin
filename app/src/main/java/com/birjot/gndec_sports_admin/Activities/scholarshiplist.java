@@ -22,13 +22,27 @@ public class scholarshiplist extends AppCompatActivity implements AdapterView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        }
+
+        setTitle("Scholarships");
         setContentView(R.layout.activity_scholarshiplist);
+
         listview = (ListView) findViewById(R.id.listView);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>( scholarshiplist.this,android.R.layout.simple_list_item_1 ,heading);
         listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(this);
 
+    }
+
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return true;
     }
 
     @Override

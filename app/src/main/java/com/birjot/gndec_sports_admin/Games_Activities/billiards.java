@@ -19,6 +19,8 @@ public class billiards extends AppCompatActivity {
 
         setContentView(R.layout.activity_billiards);
 
+        setTitle("Facilities");
+
         WebView web = (WebView) findViewById(R.id.billweb);
         String text =  "One traditional table with balls and cues is installed in the room. Billiard is regularly played by staff and students in the group of four per hour.";
         web.loadData("<p style=\" text-align: justify\">"+ text +"</p>", "text/html", "UTF-8");

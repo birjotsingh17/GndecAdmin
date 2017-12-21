@@ -74,8 +74,6 @@ public class lookforLastestnews extends Fragment {
 
         progressDialog = new ProgressDialog(getActivity());
 
-
-
         //displaying progress dialog while fetching images
         progressDialog.setMessage("Please wait...");
         progressDialog.show();

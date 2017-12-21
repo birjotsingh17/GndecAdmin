@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:textStyle="bold"
-
-            android:textColor="@color/colorPrimary"
+            android:background="@drawable/border"
+            android:textColor="@color/black"
             android:gravity="center"
             android:layout_marginTop="8dp"
             android:text="COMMITEE"/>
@@ -39,24 +39,25 @@
         android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="197dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="187dp"
+            android:layout_marginTop="10dp"
             app:srcCompat="@drawable/commitee1"
             android:id="@+id/imageView8" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="275dp"
-            android:layout_marginTop="8dp"
             app:srcCompat="@drawable/commitee2"
             android:id="@+id/imagedssView8" />
     </LinearLayout>
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>-->
+
 
 
 </LinearLayout>
